@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    function cambia_parrafo()
+    {
+        let lista = document.getElementsByTagName('p');
+        let valortexto= document.getElementById("texto").value;
+        for (let p = 0 ; p<lista.length; p++)
+        {
+            // lista[p].childNodes[0].nodeValue = lista[p].childNodes[0].nodeValue + " ####";
+            lista[p].childNodes[0].nodeValue = lista[p].childNodes[0].nodeValue + " " +valortexto;
+            // lista[p].value = lista[p].value + " " + valortexto; este codigo no funciona...
+        }
+    }
+</script>
+</head>
+<body>
+    <p>este es el primer parrafo</p>
+    <p>este es el segundo parrafo</p>
+    <p>este es el tercer parrafo</p>
+    <input type="text" id="texto">
+    <input type="button" value="agregar #### al final de cada parrafo" onclick="cambia_parrafo()">
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlaces</title>
+    <script src="../jquery-3.6.0.js"></script>
+<script>
+    let d = $(document);
+    d.ready(operacion);
+
+    function operacion()
+    {
+       let p = $("button");
+       p.mousemove(resaltarprimero); //los eventos los tenemos en la api de jquery
+       p.click(resaltarultimo);
+    }
+
+    function resaltarprimero()
+    {
+        let k = $("li:first");
+        k.css("background" , "cyan");
+    }
+
+    function resaltarultimo()
+    {
+        let k = $("li:last");
+        k.css("background" , "cyan");
+    }
+</script>
+    
+</head>
+<body>
+    <button>operacion</button><br>
+    <ul>
+        <script>
+            for(let p = 1 ; p<36 ; p++)
+            {
+                document.write('<li>enlace ' + p + '</li>');
+            }
+
+        </script>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    function ver_hijos()
+     {
+        let primero = document.getElementById('primera_capa');
+        alert('nodos de la primera capa: ' + primero.childNodes.length);
+        let segundo = document.getElementById('segunda_capa');
+        alert('nodos de la segunda capa: ' + segundo.childNodes.length);
+        let tercero = document.getElementById('tercera_capa');
+        alert('nodos de la tercera capa: ' + tercero.childNodes.length);
+     }
+</script>
+
+</head>
+<body>
+    <div id="primera_capa"><p>parrafo uno</p><p>parrafo dos</p><p>parrafo 3</p></div>
+    <div id="segunda_capa">
+        <p>parrafo uno</p>
+        <p>parrafo dos</p>
+        <p>parrafo 3</p>
+    </div>
+    <div id="tercera_capa">
+        <p>parrafo uno</p>
+        <p>parrafo dos</p><p>parrafo dos bis</p>
+        <p>parrafo 3</p>
+    </div>
+    <input type="button" value="presiona para ver hijos" onclick="ver_hijos()">
+</body>
+</html>

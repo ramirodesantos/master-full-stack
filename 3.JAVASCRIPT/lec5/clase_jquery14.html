@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlaces</title>
+    <script src="./jquery-3.6.0.js"></script>
+<script>
+
+    // no funciona al introducir escribircontenido2, lo soluciona la clase del 6-6-2022, revisar
+    let d = $(document);
+    d.ready(procedimiento);
+
+    function procedimiento()
+    {
+        let p = $("#boton1");
+        p.click(leercontenido);
+        let t = $("#boton2");
+        t.click(escribircontenido);
+        let cadena = "en un lugar de la mancha";
+        t.dblclick(function(){
+            escribircontenido2(cadena);
+        });
+    }
+
+    function leercontenido()
+    {
+        let k = $("p");
+        alert(k.html());
+    }
+
+    function escribircontenido()
+    {
+        let k = $("p");
+        console.log("dentro");
+        k.text("como Yoda: moderno el nuevo texto es");
+    }
+
+    function escribircontenido2(cadena)
+    {
+        let k = $("p");
+        k.text(cadena);
+    }
+    
+</script>
+    
+</head>
+<body>
+    <button id="boton1">leer texto</button><br>
+    <button id="boton2">escribir texto</button>
+    <p>este es el texto original</p>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Para ver como Babel transpila el js moderno en js entendido por la mayoria de los navegadores
+//  en https://babeljs.io/repl/#?browsers=defaults%2C%20not%20ie%2011%2C%20not%20ie_mob%2011&build=&builtIns=false&corejs=3.21&spec=false&loose=false&code_lz=MYewdgzgLgBA3jMBDAtgUxgXxgXhigTwAU0AnCcAKBlEliVxgFZrrboYALNAGx5EYAKAJS4AfDXAUeaAHT8A5oIDkACV79lwykA&debug=false&forceAllTransforms=true&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&timeTravel=false&sourceType=module&lineWrap=true&presets=env&prettier=false&targets=&version=7.19.2&externalPlugins=&assumptions=%7B%7D
+
+// ES6 - 2015
+
+// let, const, arrow functions
+
+// DEFAULT PARAMS
+
+// const sayHello = (greeting = 'Hello') => {
+//   console.log(greeting)
+// }
+
+// sayHello('Hello')
+// sayHello()
+// sayHello('Ciao')
+
+
+// const display = (isGrid = true) => {
+//   if(isGrid) {
+//     console.log('grid')
+//     // display grid
+//   } else {
+//   // display table
+//   console.log('Table')
+//   }
+// }
+
+// display()
+// display()
+// display()
+// display()
+// display(true)
+
+// const wordUpperCase = (word) => {
+//   if(word !== undefined)
+//     word.toUpperCase()
+// }
+// console.log(wordUpperCase('roxana'))
+// wordUpperCase()
+
+
+// const wordUpperCase = (word = '') => word.toUpperCase()
+
+// console.log(wordUpperCase('roxana'))
+// wordUpperCase()
+
+
+
+// REST PARAMS
+
+// const sum = (...c) => {
+//   let s = 0;
+//   for(numero of c) {
+//     s = s+numero
+//   }
+//   console.log(s)
+// }
+
+// sum(1,2,3,4,5, 6, 7)
+
+
+
+// SPREAD OPERATOR
+
+// const numbersToAdd = [1,2,3]
+
+// const sum = (a, b, c) => {
+//   console.log(a, b, c)
+// }
+
+// sum(...numbersToAdd)
+
+
+
+// PROPERTY SHORTHAND
+
+// const name = 'Roxana'
+// const lastName = 'Cestari'
+
+// const myPerson = {
+//   name: name,
+//   lastName: lastName
+// }
+// console.log(myPerson)
+
+// const myPerson2 = { name, lastName }
+// console.log(myPerson2)
+
+
+
+// COMPUTED PROPERTY NAMES
+// const desiredKey = 'age'
+// const myObj = {
+//   [desiredKey]: 30
+// }
+
+// console.log(myObj)
+
+
+
+// STRING INTERPOLATION
+// const myPerson = {
+//   name: 'Roxana',
+//   nrOfBill: 3,
+//   amountPerBill: 30
+// }
+
+// console.log(myPerson.name + ' has to pay ' + myPerson.nrOfBill * myPerson.amountPerBill + ' euros')
+// console.log(`${myPerson.name} has to pay ${myPerson.nrOfBill * myPerson.amountPerBill} euros`)
+
+
+
+// DESTRUCTURING 
+// ARRAY
+
+// const myNames = ['Roxana', 'Cestari']
+// const [name, fullName] = myNames
+// // const name = myNames[0]
+// // const fullName = myNames[1]
+// console.log(name)
+
+// DESTRUCTURING
+// OBJECTS
+//  const myPerson = {
+//    name: 'Roxana',
+//    age: 30
+//  }
+ 
+ //const age = myPerson.age
+//  const { age: myAge } = myPerson
+//  console.log(myAge)
+ 
+//  const { house } = myPerson
+ // console.log(myPerson.name)
+
+
+ 
+  //const name = myPerson.name
+  //const { name } = myPerson
+  // console.log(name)
+ 
+//  myPerson.house = 'my house is red'
+//  console.log(myPerson)
+ 
+ // variableName = valor
+ 
+ // const a = myPerson.bla
+//  console.log(a)
+//  console.log(myPerson)
+ 
+ // const { a } = myPerson
+ // const { a } = myPerson es equivalente a const a = myPerson.a
+ // console.log(a)
+ // const { a:myNewVariable='my default value' } = myPerson
+ 
+ // const { a:myNewVarible} = myPerson
+ // const { a:myNewVarible } = myPerson es equivalente a const myNewVariable = myPerson.a
+
+ // si la propiedad a no existe en el objeto myPerson, myNewVariable va ser igual a undefined
+ // para evitar que la variable myNewVariable sea undefined, le podemos pasar un valor por defeto, de la siguiente manera
+ 
+ // { const a:myNewVariable = 'default value' } = myPerson
+
+
+// var a = 5 
+// A LA IZQUIERDA DEL IGUAL ES LA VARIABLE
+// A LA DERECHA DEL IGUAL ES EL VALOR QUE SE LE ASIGNA
+// !!! PARA ASIGNARLE UNA PROPIEDAD A UN OBJECTO, TIENE QUE ESTAR DEL LADO IZQUIERO DEL IGUAL !!!!
+
+
+ 
+ // myPerson.fullName = 'roxana cestari' <- al objeto myPerson, se le anade una propiedad fullName igual a roxana cestari
+ // const a = myPerson.fullName <-- a la variable a se le asigna el valor de myPerson.fullName (esto no cambia el valor de myPerson)
+ 
+//  console.log(myPerson)
+//  console.log(myNewVariable)
+ 
+
+ 
+ // ES2020
+ 
+ // OPTIONAL CHAINING
+//  let data = {
+//    user: {
+//      name: 'Roxana'
+//    }
+//  }
+ 
+//  data = {}
+
+//  console.log(data?.user?.name)
+             
+//  data.user.name = 'r'
+//  data.caro = 'honda'
+//  data.caro.bk = 's'
+//  console.log(data)
+ 
+
+
+// TERNARY OPERATOR
+// condicion ? true case : false case
+ 
+
+// const age = 30
+//  let drink
+//  if(age > 18) {
+//    drink = 'Vodka'
+//  } else {
+//    drink = 'Coca cola'
+//  }
+
+// console.log(drink)
+
+ 
+// let drink = age > 18 ? 'Vodka' : 'coca cola'
+// console.log(drink)
+
+
+// SETTIMEOUT & SETINTERVAL
+
+// setTimeout(() => {
+// console.log('Hello')
+// }, 3000) <-- Hello se va mostrar despues de 3000 milisegundos
+
+// setInterval(() => console.log('Hello'), 3000) <-- Hello se va mostrar cada 3000 milisegundos
+
+
+    </script>
+</body>
+</html>

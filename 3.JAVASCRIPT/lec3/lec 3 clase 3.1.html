@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lec 3 clase 3.1</title>
+<script>
+    function Inizializar()
+    {
+        document.getElementById("crear-ventana").onclick = crearnueva;
+        document.getElementById("cerrar-ventana").onclick = cerrarnueva;
+    }
+    let nuevaventana;
+    function crearnueva()
+    {
+        nuevaventana = window.open("https://www.google.es", "", "height=400 , width=200");
+        console.warn(nuevaventana);
+    }
+    function cerrarnueva()
+    {
+        if (nuevaventana)
+        {
+            nuevaventana.close();
+            nuevaventana = null;
+        }
+    }
+    // el codigo de arriba tiene un problema y es que si se abren varias ventanas y luego le damos a cerrar ventana, solo se cierra la ultima ventana creada
+
+</script>
+
+</head>
+<body onload="Inizializar()">
+    <h1>abrimos y cerramos ventanas</h1>
+    <form action="">
+        <input type="button" id="crear-ventana" value="crear nueva ventana">
+        <input type="button" id="cerrar-ventana" value="cerrar ventana">
+    </form>
+</body>
+</html>

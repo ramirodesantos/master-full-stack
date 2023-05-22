@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlaces</title>
+    <script src="../jquery-3.6.0.js"></script>
+    <style type="text/css">
+        .noticia{
+            width: 500px;
+            height: 200px;
+            border: 1px solid blue;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 10px;
+            color: green;
+            background-color: rgb(200,200,200);
+        }
+    </style>
+<script>
+
+  
+    let d = $(document);
+    d.ready(procedimiento);
+
+    function procedimiento()
+    {
+        let p = $("button");
+        p.click(crear_formulario);
+    }
+
+    function crear_formulario()
+    {
+        let t = $("#formulario");
+        t.html('<form method="post" action="destino.php"><input type="text"><input type="submit"></form>')
+    }
+
+    
+
+
+</script>
+    
+</head>
+<body>
+    <button>crear formulario</button><br>
+    <div id="formulario"></div>
+</body>
+</html>

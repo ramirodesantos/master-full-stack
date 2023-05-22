@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lec 3 clase 2</title>
+<script>
+    // window.onload = function() //en el onload cargas todas la funciones que necesites y asignas todos los eventos que necesites.
+    // {
+    //     function rellenatexto1()
+    //     {
+    //         document.getElementById("texto1").value = Math.PI;
+    //     }
+    //     document.getElementById("boton1").onclick = rellenatexto1;
+    //     document.getElementById("boton2").onmouseleave = rellenatexto1;
+    // }
+
+    // scrip para la lista
+    // document.getElementById('lista').addEventListener('click', function(e)
+    // {
+    //     console.log("has hecho click en la etiqueta roja");
+    // },false);
+</script>
+</head>
+<body>
+   <input type="text" id="texto1">
+   <!-- <input type="button" value="rellena texto1" id="boton1" onclick="rellenatexto1()">  lo dejo comentado para tenerlo presente, ahora vamos a ver otra forma de crear un evento -->
+
+   <input type="button" value="rellena texto1" id="boton1">
+    <!-- creo otro boton que haga lo mismo -->
+    <input type="button" value="rellena texto1" id="boton2">
+
+    <br>
+
+    <ul id="lista">
+        <li><label alt="amarilla">primer item</label></li>
+        <li><label alt="roja" id="roja">segundo item</label></li>
+        <li><label alt="verde">tercer item</label></li>
+        <li><label alt="azul">cuarto item</label></li>
+    </ul>
+
+    <script>
+        // window.onload = function() //en el onload cargas todas la funciones que necesites y asignas todos los eventos que necesites.
+        // {
+        //     function rellenatexto1()
+        //     {
+        //         document.getElementById("texto1").value = Math.PI;
+        //     }
+        //     document.getElementById("boton1").onclick = rellenatexto1;
+        //     document.getElementById("boton2").onmouseleave = rellenatexto1;
+        // }
+    
+        // scrip para la lista
+        document.getElementById('lista').addEventListener('click', function(e)
+        {
+            console.log("has hecho click en la etiqueta roja");
+        },false);
+    </script>
+
+</body>
+</html>

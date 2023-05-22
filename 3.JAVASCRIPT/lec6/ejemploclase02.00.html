@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th , td {
+            padding: 5px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <button type="button" onclick="cargaTabla()">mis CDs favoritos</button>
+    <br>
+    <table id="demo">
+
+    
+
+    </table>
+    <script>
+        function cargaTabla()
+        {
+            let xhr = new XMLHttpRequest; // esto no es del todo correcto
+             // la forma correcta es esta:
+            // if(window.XMLHttpRequest)
+            // {
+            //     XHR = new XMLHttpRequest();
+            // }else if (window.ActiveXObject)
+            // {
+            //     XHR = new ActiveXObject("Microsoft.XMLHTTP");
+            // }
+            xhr.onreadystatechange = function()
+            {
+                if(xhr.readyState == 4 && xhr.status == 200)
+                {
+                    funciontabla(xhr);
+                }
+            };
+
+            xhr.open("GET","cd_catalog.xml",true)
+            xhr.send();
+           
+        }
+
+        function funciontabla(xml) // el parametro que le enviamos se puede llamar como se quiera
+        {
+            let i;
+            let xmlDocumento = xml.responseXML;
+            let tabla = "<tr><th>Artista</th><th>Titulo</th><th>Año</th></tr>";
+            let x = xmlDocumento.getElementsByTagName("CD");
+            for (i = 0; i < x.length; i++)
+            {
+                tabla += "<tr><td>" + 
+                    x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue + 
+                    "</td><td>" + 
+                    x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue + 
+                    "</td><td>" +
+                    x[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue + 
+                   "</td></tr>";
+            }
+            document.getElementById("demo").innerHTML = tabla;
+        }
+    </script>
+</body>
+</html>

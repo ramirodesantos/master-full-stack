@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    function cambiarcolor()
+    {
+        let puntero = document.getElementById('primerparrafo');
+        let padre = puntero.parentNode;
+        padre.style.backgroundColor= '#FF0000';
+    }
+
+</script>
+
+</head>
+<body>
+    <div>
+        <p id="primerparrafo">este es el parrafo numero 1</p>
+        <p>este es el parrafo numero 2</p>
+        <p>este es el parrafo numero 3</p>
+    </div>
+    <input type="button" value="cambiar color de fondo" onclick="cambiarcolor()">
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lec 3 clase 1</title>
+<script>
+    // EVENTOS
+    // javascript ejecuta el código secuencialmente (algo parecido a las cascadas, cuidado con declarar funciones al final de tu cógido porque pueden no funcionarte si las llamas en lineas previas)
+    // en la leccion 3, manual, vienen casi todos los eventos. leer bien. en el manual faltan los eventos de "tablet" y "movil"
+    function MostrarPi()
+    {
+        alert("el numero pi vale:\n " + Math.PI)
+    }
+</script>
+
+</head>
+<body>
+    <input type="submit" value="enviar" ondblclick="alert('has hecho doble click en botón enviar');">
+    <input type="submit" value="enviar2" onclick="alert('has hecho click en boton2');">
+    <input type="submit" value="enviar3" onblur="alert('has hecho click en boton3');">
+
+    <div onclick="alert('has presionado un botón');" onmouseover="alert('estás por encima');"> interactividad total y absoluta </div>
+    <div id="datoscliente" style="height: 200px; width: 300px; border: solid greenyellow;" 
+    onmouseover="this.style.borderColor='red';"
+    onmouseleave="this.style.borderColor='greenyellow';">hola</div>
+    
+    <input type="submit" value="muestrame el numero pi"
+    onclick="MostrarPi();">
+</body>
+</html>

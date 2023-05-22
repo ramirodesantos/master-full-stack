@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lec 2 clase 2</title>
+<script>
+    // tipos de mensajes que podemos mostrar por consola
+    console.error("esto es un mensaje de error");
+    console.log("mensaje tradicional de consola");
+    console.info ("mensaje de informacion con icono de info");
+    console.debug("es igual que el log, no presenta icono");
+    console.warn("nos presenta un mensaje con warning y su correspondiente icono.")
+    let primeravariable = 50;
+    let lapices = ["rojos" , "azules" ,"amarillos", "verdes"];
+    let longitud_lapices=lapices.length;
+    console.log(longitud_lapices);
+    console.log(lapices);
+    console.info("la longitud del array lapices es: "+ longitud_lapices);
+    console.info("el elemento 0 es: "+lapices[0]);
+    console.info("el ultimo elemento del array lapices es: " + lapices[lapices.length-1]);
+
+    //introducir un elemento al ppio del array
+    lapices.unshift("marron");
+    console.warn("el array completo es: " + lapices);
+    // introducir elemento al final del array
+    let tope_lapices = lapices.push("rosa"); //tope_lapices almacena la posición (el indice +1) del elemento lapices.push("rosa")
+    console.log("el array tras introducir un elemento al final es: " + lapices + "y su longitud es " + lapices.length);
+    console.log("la longitud del array es: " + tope_lapices);
+    tope_lapices = lapices[5]; // ahora tope_lapices almacena el valor de la ultima posición del array
+    console.log(tope_lapices);
+    // buscamos el indice de algún valor conocido
+    let valor_buscado = lapices.indexOf("amarillos");
+    console.log("el indice de amarillos dentro del array es: " + valor_buscado);
+    console.log("el valor del indice "+valor_buscado+" es: "+lapices[valor_buscado]);
+
+    //vamos a eliminar el ultimo lapiz
+    longitud_lapices=lapices.length;
+    console.log("quiero eliminar el ultimo lapiz que es: "+lapices[longitud_lapices-1]);
+    console.info(lapices);
+    let lapiz_eliminado = lapices.pop();
+    console.info("el lapiz que he eliminado es :" + lapiz_eliminado);
+    console.info(lapices);
+
+    //quiero eliminiar el primer elemento del array lapices
+    let lapiz_primero_eliminado = lapices.shift();
+    console.info("el primer elemento del array lapices eliminados es: "+lapiz_primero_eliminado);
+    console.log(lapices);
+
+    // vamos a darle la vuelta al orden del array lapices
+    lapices.reverse();
+    console.log("el array de lapices invertido es: " , lapices);
+
+    // lo ponemos de nuevo en el orden original
+    lapices.reverse();
+    let lapices_invertido=lapices.reverse();
+    // para copiar arrays sin vincularlos. slice.
+    let lapices2=lapices.slice()
+
+    console.log("lapices invertido es: " + lapices_invertido);
+    lapices_invertido.unshift("negros");
+    console.log("lapices invertido despues de añadir negros es: " + lapices_invertido);
+    lapices_invertido.reverse();
+    lapices_invertido.shift();
+    console.error("lapices invertido es ahora, tras revertir y eliminar el primero: " + lapices_invertido)
+    console.log(lapices);
+    // se ha quedado vinculado el array lapices con el array lapices invertido, lo que le hagas a uno se lo haces al otro por tanto son iguales. cuidado.
+    // para copiar un array en otro sin vincularlo hay que usar slice!!!
+    console.info("el array lapices2 es: " + lapices2); //el array lapices2 ya no está vinculado a lapices
+
+    // formas de recorrer un array
+    for(let z=0 ; z< lapices.length; z++)
+    {
+        console.info("el color de los lapices es: "+lapices[z])
+    }
+
+    // forma mas moderna de recorrer array. te devuelve el indice del array
+    for (let n in lapices)
+    {
+        console.error("lapices: " + n, "de valor" + lapices[n]);
+    }
+
+    // forma moderna 2, no te devuelve el indice solo los valores de array
+
+    for (let valor of lapices)
+    {
+        console.warn("el color del lapiz es: " + valor);
+    }
+
+    // forma más compleja
+
+    lapices.forEach(function(valor, indice, array)
+    {
+        console.log("el indice " + indice + "tiene de valor " + valor);
+    })
+
+    // vamos a ver un bucle con continue usando array de lapices
+    for(let valor in lapices)
+    {
+        if(lapices[valor] == "verdes")
+        {
+            continue; // permite saltar un elemento
+        }else
+        {
+            console.log("color de lapices: " + lapices[valor]);
+        }
+    }
+
+    // bucle for que sale del bucle al encontrar los verdes
+    for(let valor in lapices)
+    {
+        if(lapices[valor] == "verdes")
+        {
+            break; // sale del bucle
+        }else
+        {
+            console.warn("color de lapices: " + lapices[valor]);
+        }
+    }
+
+    // metodo para añadir un valor en cualquier posición del array con SPLICE. propiedad muy util, permite también eliminar elementos del array.
+    console.info(lapices);
+    lapices.splice(1,0,"violetas");
+    console.info(lapices);
+
+    //vamos a usar splice para eliminar.
+    lapices.splice(3,1,"amarillo pollo");
+
+    // vamos a unir todos los elementos del array en una cadena
+    let pizarra = lapices.join("  -  ");
+    console.log("el string pizarra es: " , pizarra + "y su dimension es" , pizarra.length);
+    console.log(lapices)
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

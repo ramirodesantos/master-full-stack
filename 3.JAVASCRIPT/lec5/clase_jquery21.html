@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlaces</title>
+    <script src="../jquery-3.6.0.js"></script>
+    <style type="text/css">
+        .noticia{
+            width: 500px;
+            height: 200px;
+            border: 1px solid blue;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 10px;
+            color: green;
+            background-color: rgb(200,200,200);
+        }
+    </style>
+<script>
+
+    
+    let d = $(document);
+    d.ready(procedimiento);
+
+    function procedimiento()
+    {
+        let p = $("#usuario").on('over', function);
+        p.focus(enfocar);
+        p.blur(desenfocar);
+    }
+
+    function enfocar()
+    {
+        let x = $("#usuario");
+        x.attr("value" , "");
+    }
+
+    function desenfocar()
+    {
+        let x = $("#usuario");
+        x.attr("value" , "introduce usuario");
+    }
+
+    
+    
+    
+
+
+</script>
+    
+</head>
+<body>
+    <form action="post">
+        <input type="text" name="" id="usuario" value="introduce usuario">
+        <input type="submit">
+    </form>
+</body>
+</html>

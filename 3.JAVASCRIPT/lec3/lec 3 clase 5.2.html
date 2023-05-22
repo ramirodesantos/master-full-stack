@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let contador = 1;
+        function agregar_elemento()
+        {
+            let nuevoelemento = document.createElement('p');
+            let nuevotexto = document.createTextNode("lugar mancha " + contador);
+            contador++;
+            nuevoelemento.appendChild(nuevotexto);
+            let idcapa = document.getElementById('capa');
+            idcapa.appendChild(nuevoelemento);
+        }
+
+        function eliminar_primero()
+        {
+            let idcapa = document.getElementById("capa");
+            if (idcapa.children.length > 0)
+            {
+                idcapa.removeChild(idcapa.children[0]); //probarlo con childNodes[0]
+            }
+        }
+
+        function eliminar_ultimo()
+        {
+            let idcapa = document.getElementById("capa");
+            if (idcapa.children.length > 0 )
+            {
+                let ultimonodo = idcapa.children.length - 1;
+                idcapa.removeChild(idcapa.children[ultimonodo]);
+            }
+        }
+
+        function eliminar_segundo()
+        {
+            let idcapa = document.getElementById("capa");
+            if (idcapa.children.length > 1)
+            {
+                idcapa.removeChild(idcapa.children[1]); //probarlo con childNodes[0]
+            }
+        }
+
+        function eliminar_elegido()
+        {
+            let idcapa = document.getElementById("capa");
+            let nodoelegido = document.getElementById("elegido").value;
+            if (idcapa.children.length)
+            if (idcapa.children.length > 0 )
+            {
+                idcapa.removeChild(idcapa.children[nodoelegido]);
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <div id="capa"></div>
+    <input type="text" id="elegido">
+    <input type="button" value="agregar nodod de tipo elemento"
+        onclick="agregar_elemento()">
+    <input type="button" value="eliminar primer nodo de tipo elemento"
+        onclick="eliminar_primero()">
+    <input type="button" value="eliminar segundo nodo de tipo elemento"
+        onclick="eliminar_segundo()">    
+    <input type="button" value="eliminar ultimo nodo de tipo elemento"
+        onclick="eliminar_ultimo()">
+    <input type="button" value="eliminar nodo elegido de tipo elemento"
+        onclick="eliminar_elegido()">
+</body>
+</html>

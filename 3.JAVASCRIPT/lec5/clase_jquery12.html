@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlaces</title>
+    <script src="../jquery-3.6.0.js"></script>
+<script>
+    let d = $(document);
+    d.ready(operacion);
+
+    function operacion()
+    {
+        let p = $("button");
+        p.click(resaltar);
+    }
+
+    function resaltar()
+    {
+        // let k = $("h1"); //resalta todos los h1
+        let k = $("h1#parrafo");  //resalta todos los h1 que tengan id parrafo
+        let p = $("p#parrafo");  //resalta todos los p que tengan id parrafo
+        k.css("background", "red");
+        p.css("background", "red");
+    }
+</script>
+    
+</head>
+<body>
+    <button>operacion</button><br>
+    <p>soy un parrafo</p>
+    <p id="parrafo">soy un parrafo con id</p>
+    <h1 id="parrafo">soy un h1 con un id</h1>
+    <h1>soy otro titulo h1</h1>
+</body>
+</html>

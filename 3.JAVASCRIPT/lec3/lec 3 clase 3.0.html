@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lec 3 clase 3.0</title>
+<script>
+    let i = 0;
+    function MoverVentana()
+    {
+        MiVentana.moveTo(5,5);
+        i++;
+        console.log("valor i: " + i);
+        i<200 ? setTimeout("MoverVentana()",100) : MiVentana.close();
+    }
+</script>
+</head>
+<body>
+    <script>
+        let opciones = "menubar=yes, lotion=yes, resizeable=false, width=300, height=50, left=20, top=30";
+        MiVentana = window.open("","",opciones);
+        MiVentana.document.write("prueba de ventana abierta");
+        MiVentana.moveTo(400,100);
+        MoverVentana();
+    </script>
+</body>
+</html>

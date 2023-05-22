@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlaces</title>
+    <script src="./jquery-3.6.0.js"></script>
+    <style type="text/css">
+        .noticia{
+            width: 500px;
+            height: 200px;
+            border: 1px solid blue;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 10px;
+            color: green;
+            background-color: rgb(200,200,200);
+        }
+    </style>
+<script>
+
+    $(document).ready(function()
+    {
+        let k = $("#articulo");
+
+        let btAdd = $("#boton1");
+        btAdd.click(function(){
+            k.addClass("noticia");
+        });
+
+        let btDel = $("#boton2");
+        btDel.click(function(){
+            k.removeClass("noticia");
+        });
+    });
+
+
+</script>
+    
+</head>
+<body>
+    <button id="boton1">ponemos estilo</button><br>
+    <button id="boton2">quitamos estilo</button><br>
+    <div id="articulo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat sit vel, consequatur eum repudiandae illo possimus unde id illum. Quisquam.</div>
+</body>
+</html>

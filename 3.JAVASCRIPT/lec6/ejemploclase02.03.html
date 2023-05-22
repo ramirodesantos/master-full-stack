@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $.ajax({
+            
+                type: "GET",
+                url: "cd_catalog.xml",
+                dataType: "xml",
+                success: function(xml){},
+                error: function(){
+                    alert("no puedo procesar el archivo xml");
+                }
+            })
+            let tabla = "<tr><th>Artista</th><th>Titulo</th><th>Año</th></tr>";
+            $(xml).find('CD').each(function()
+            {
+                let titulo = $(this).find('<TITLE>').text();
+                let artista = $(this).find('<ARTIST>').text();
+                $("demo2").html (titulo + "," + artista);
+            })
+        })
+    </script>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th , td {
+            padding: 5px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <button type="button" onclick="cargaTabla()">mis CDs favoritos</button>
+    <br>
+    <table id="demo">
+
+    </table>
+    <div id="demo2"></div>
+    <script>
+        function cargaTabla()
+        {
+            let xhr = new XMLHttpRequest; // esto no es del todo correcto
+             // la forma correcta es esta:
+            // if(window.XMLHttpRequest)
+            // {
+            //     XHR = new XMLHttpRequest();
+            // }else if (window.ActiveXObject)
+            // {
+            //     XHR = new ActiveXObject("Microsoft.XMLHTTP");
+            // }
+            xhr.onreadystatechange = function()
+            {
+                if(xhr.readyState == 4 && xhr.status == 200)
+                {
+                    funciontabla(xhr);
+                }
+            };
+
+            xhr.open("GET","cd_catalog.xml",true)
+            xhr.send();
+           
+        }
+
+        function funciontabla(xml) // el parametro que le enviamos se puede llamar como se quiera
+        {
+            let i;
+            let xmlDocumento = xml.responseXML;
+            // let tabla = "<tr><th>Artista</th><th>Titulo</th><th>Año</th></tr>";
+            let selector = "<select name = 'selector' >";
+            let x = xmlDocumento.getElementsByTagName("CD");
+            for (i = 0; i < x.length; i++)
+            {
+                let datoArtista = x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue;
+                let datoTitulo = x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue;
+                let datoAño = x[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue;
+                selector += '<option value="' + datoArtista + '">';
+                selector += datoTitulo + '</option>';
+                // tabla += "<tr><td>" + datoArtista + "</td><td>" + datoTitulo + "</td><td>" + datoAño + "</td></tr>";
+            }
+            // document.getElementById("demo").innerHTML = tabla;
+            document.getElementById("demo2").innerHTML = selector;
+        }
+    </script>
+</body>
+</html>

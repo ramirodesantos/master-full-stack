@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function siguienteparrafo()
+        {
+            let puntero1 = document.getElementById("tres parrafos");
+            let puntero2 = puntero1.firstChild
+            while (puntero2 != null)
+            {
+                if (puntero2.nodeType == Node.ELEMENT_NODE)
+                {
+                    alert(puntero2.childNodes[0].nodeValue);
+                }
+                else
+                {
+                    alert("no es un nodo de tipo elemento");
+                }
+                // esto es lo mismo que poner if(puntero1.nodeType == Node.ELEMENT_NODE)
+                // alert(puntero1.childNoder[0].nodeValue)
+                // esto solo ocurre cuando hay una sola instruccion despues del if
+                puntero2 = puntero2.nextElementSibling; 
+            }
+        }
+    
+    
+    </script>
+    
+    
+    </head>
+    <body>
+        <div id="tres parrafos">
+            <p>este es el parrafo 1</p>
+            <p>este es el parrafo 2</p>
+            <p>este es el parrafo 3</p>
+        </div> 
+        <input type="button" value="accede a los 3 parrafos" onclick="siguienteparrafo()"> 
+    </body>
+    </html>

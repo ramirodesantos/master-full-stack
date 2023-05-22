@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lec 3 clase 8.1</title>
+<script>
+let nombre = navigator.appName;
+document.write("nombre del navegador: " + nombre + '<br>');
+let codigo_navegador = navigator.appCodeName;
+document.write("codigo del navegador: " + codigo_navegador + '<br>');
+let version = navigator.appVersion;
+document.write("version del navegador: " + version + '<br>');
+let cookies = navigator.cookieEnabled;
+document.write("¿tengo cookies activas? " + cookies + '<br>');
+let plataforma = navigator.platform;
+document.write("plataforma: " + plataforma + '<br>');
+let useragent = navigator.userAgent;
+document.write("agente de usuario: " + useragent + '<br>');
+let java = navigator.javaEnabled();
+document.write("¿puedo ejecutar java?: " + java + '<br>');
+
+// objeto SCREEN
+// para sacar el ancho y el alto de la pantalla del visitante
+let anchura = screen.width;
+let altura = screen.height;
+// anchura disponible - la barra de tareas
+let anchodisponible = screen.availWidth;
+// altura disponible - la barra de tareas
+let alturadisponible = screen.availHeight;
+// los bits que se necesitan para mostar un color
+let bitsporcolor = screen.colorDepth;
+// profundidad de pixeles de la pantalla
+let profundidadpixel = screen.pixelDepth;
+document.write("tu pantalla es de "+anchura + " x " + altura + '<br>');
+document.write("pero solo está disponible  "+anchodisponible + " x " + alturadisponible + '<br>');
+document.write("los colores se muestran en "+ bitsporcolor +  '<br>');
+document.write("la profundidad de pixeles es "+ profundidadpixel +  '<br>');
+
+// objeto WINDOW. window.nombrepropiedad o window.nombremetodo([parametros])
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

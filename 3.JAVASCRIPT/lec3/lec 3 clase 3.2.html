@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lec 3 clase 3.2</title>
+<script>
+    function cambiacolor()
+    {
+        let idpresentacion = document.getElementById("presentacion");
+        idpresentacion.style.color = '#ff0000';
+    }
+
+    function cambiadimension()
+    {
+        let idpresentacion = document.getElementById("presentacion");
+        idpresentacion.style.fontSize = '60px';
+    }
+
+</script>
+
+
+</head>
+<body>
+    <h1 id="presentacion">en un lugar de la mancha</h1>
+    <input type="button" value="cambiar color" onclick="cambiacolor()">
+    <input type="button" value="cambiar tamaño" onclick="cambiadimension()">
+</body>
+</html>

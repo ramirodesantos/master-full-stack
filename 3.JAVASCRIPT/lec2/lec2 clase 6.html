@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lec 2 clase 6</title>
+<script>
+    // objeto nativo Math!!!!
+    //  let numero = Number("55");
+    //  if(!isNaN(numero))
+    //  {
+    //     alert(" es un numero");
+    //  }else 
+    //  {
+    //     alert("no es un numero")
+    //  }
+
+     let numeropi = Math.PI;
+    //  alert("el numero pi es: " + numeropi);
+    let numeropi_redondeado =  Math.round(numeropi);
+    // alert("numero pi redondeado: " + numeropi_redondeado);
+
+    // valor absoluto Math.abs
+    // alert("el valor absoludo de -20 es " + Math.abs(-20));
+
+    let aleatorio = Math.random();
+    // alert(aleatorio); nos devuelve un numero aleatorio entre 0 y 1
+
+    // para crear un num aleatorio entre 2 valores se hace con una funcion. el minimo está incluido pero el maximo es el límite, no llega. si queremos numeros aleatorios entre 5 y 10 y ponemos min = 5 y max= 10, nos pasa valores entre 5 y 9.9999999999
+    function numeroaleatorio_condecimales(minimo, maximo) // con decimales
+    {
+        return (Math.random()*(maximo-minimo) + minimo);
+    }
+
+
+    function numeroaleatorio(minimo, maximo)
+    {
+        return Math.floor((Math.random()*(maximo-minimo) + minimo));
+    }
+
+
+    function numeroaleatorio_conredondeo(minimo, maximo)
+    {
+        return Math.round((Math.random()*(maximo-minimo) + minimo));
+    }
+
+    // alert(numeroaleatorio_conredondeo(2,12));
+
+    // funcion eval!! está siendo deprecada pero sigue funcionando, evalúa un código que le pasemos por parámetro pero mucho cuidado que nos la puede liar pero bien.
+
+    // objeto nativo STRING, metodos de cadenas
+    let oracion = "en un lugar de la mancha";
+    console.log("la longitud de la oracion es: "+ oracion.length);
+    console.warn("la oracion en mayusculas es: " + oracion.toUpperCase()); //para poner en mayusc
+    console.info("la oracion en minusculas es: " + oracion.toLowerCase()); //para poner en minusc
+    console.error("la horacion dividida en espacios" + oracion.split(" "))
+
+    // para transformar un string en un array usamos split y separamos por lo que queramos (espacio con " ", o por caracteres con "")
+    oracion = oracion.split(" ");
+    console.info(oracion);
+
+    oracion = oracion.join(" ");
+    console.info(oracion);
+    console.log("¿en qué posición está 'la' en la oracion? " + oracion.indexOf("la"));
+    console.log("oracion separada desde la posicion 7 a la 14: " + oracion.slice(6,13));
+    console.log("oracion separada desde la posicion 7 al final: " + oracion.slice(6));
+    console.error("la posicion 6 desde 0 es: " + oracion.charAt(6));
+    console.info("la posicion de la ultima letra l es: " + oracion.lastIndexOf("l") , "y de la primera letra l es " + oracion.indexOf("l"));
+    console.log("oracion se queda en: " + oracion.substring(6,11));
+    console.warn("oracion se queda en: " + oracion.substring(11,6));
+    console.error("oracion se queda en: " + oracion.substring(-11,6));
+    console.info("oracion se queda en: " + oracion.substring(-11)); //si ponenos un num negativo nos devuelve la cadena entera.
+
+    // FUNCIONES PREDEFINIDAS DEL LENGUAJE
+    // eval, cualquier dia la eliminan
+    console.info(eval("x = 50 ; y = 30 ; x*y"));
+    console.info(eval("5*5+3"));
+
+    // isFinite: determina si un valor es un numero finito valido
+    // let numero=1;
+    // if(isFinite(numero))
+    // {
+    //     alert("es un numero finito valido");
+    // } else
+    // {
+    //     alert("no es un numero finito valido");
+    // }
+
+    // para convertir una cadena en un numero real
+    let operacion = parseFloat("3.1415161718") + 4;
+    console.info(operacion);
+
+    // convertir una cadena a un numero entero
+    console.log(parseInt("3.141516"));
+    console.log(Number("3.1415")); //investigar metodo number, es mas nuevo
+
+
+
+    // codificar y decodificar una URL
+    let url = "buenos días";
+    let url_codificada = encodeURIComponent(url);
+    console.log("la url codificada es: "+url_codificada);
+    let url_decodificada = decodeURIComponent(url_codificada);
+    console.log("la url decodificada es: "+url_decodificada);
+    
+    // codifica y descodifica todos los caracteres especiales menos ,/:@&=+$#
+    let cadena0="@buenos#días";
+    let cadena0_codificada = encodeURI(cadena0);
+    console.warn(cadena0_codificada);
+    let cadena0_decodificada = decodeURI(cadena0_codificada);
+    console.log(cadena0_decodificada);
+
+    // codifica y decodifica todo menos *@-_+./
+    let cadena1 = "buenos-días_"
+    let cadena1_codi = escape(cadena1);
+    console.log(cadena1_codi);
+    let cadena1_decodi = unescape(cadena1_codi);
+    console.log(cadena1_decodi);
+
+    // ALGUNOS EXTRAS
+    // reasignacion de variables
+    let linealog = console.log;
+    linealog("una nueva forma de presentar datos");
+
+    const AreaCuadrado = function(lado)
+    {
+        let cuadrado = Math.pow(lado,2);
+        return cuadrado;
+    }
+
+    linealog(AreaCuadrado(10));
+
+    // podemos tener una funcion que devuelva otra funcion. esto se hace por proteccion, para que nadie pueda llamar a la funcion linealog ni ver lo que hay dentro.
+    function devuelvofuncion()
+    {
+        return function()
+        {
+            linealog("soy una funcion")
+        }
+    }
+
+    let invocarfuncion = devuelvofuncion();
+    invocarfuncion();
+
+    // lo que cualquiera haría sería:
+    function devuelvofuncion2()
+    {
+        imprimeenlog();
+    }
+
+    function imprimeenlog()
+    {
+        console.log("hola");
+    }
+
+    devuelvofuncion2();
+
+    // funcion que devuelve dos valores de funciones
+    // let contador = 0;
+    // function crearcontador()
+    // {
+    //     return
+    //     {
+    //         incremento: function()
+    //         {
+    //             contador +=1 ;
+    //             return contador;
+    //         },
+    //         valoractual: function()
+    //         {
+    //             return contador;
+    //         }
+    //     }
+    // }
+
+    // let reloj = crearcontador();
+    // console.log("el valor actual es: " + reloj.valoractual());
+    // console.log("el valor actual es: " + reloj.incremento());
+    // console.log("el valor actual es: " + reloj.valoractual());
+
+
+    // no entiendo los dos puntos, preguntar o investigar. es porque es un objeto supuestamnt, no se. ES PQ ES UN OJBETO, SE VERÁ EN PROFUNDIDAD.
+        let contador = 0;
+    function crearcontador()
+    {
+        return{
+            incremento: function()
+            {
+                contador +=1 ;
+                return contador;
+            },
+            valoractual: function()
+            {
+                return contador;
+            }
+        }
+    }
+
+    let reloj = crearcontador();
+    console.log("el valor actual es: " + reloj.valoractual());
+    console.log("el valor actual es: " + reloj.incremento());
+    console.log("el valor actual es: " + reloj.valoractual());
+
+    // setTimeout
+    setTimeout(function()
+    {
+        console.info("primer mensaje");
+    }, 
+    2000);
+    console.error("segundo mensaje");
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

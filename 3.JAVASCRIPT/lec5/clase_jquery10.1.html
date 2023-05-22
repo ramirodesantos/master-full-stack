@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlaces</title>
+    <script src="../jquery-3.6.0.js"></script>
+<script>
+    let d = $(document);
+    d.ready(operacion);
+
+    function operacion()
+    {
+        let boton = $("button");
+        boton.click(mostrar_enlaces);
+        boton.click(mostrar_lista);
+    }
+
+    function mostrar_enlaces()
+    {
+        let hiperenlace = $("[href]");
+        hiperenlace.css("background" , "yellow");
+    }
+
+    function mostrar_lista()
+    {
+        let hiperenlace = $("li");
+        hiperenlace.css("background" , "yellow");
+    }
+
+</script>
+
+    
+</head>
+<body>
+    <button>presiona aqui</button><br>
+    <script>
+        for(let p=1; p<8 ; p++)
+        {
+            document.write("<a href='#'>Enlace " + p + "</a> <br>");
+        }
+    </script>
+    <ul>
+        <script>
+            for(let p=1; p<8 ; p++)
+        {
+            document.write("<li>Enlace " + p + "</li>");
+        }
+        </script>
+    </ul>
+</body>
+</html>

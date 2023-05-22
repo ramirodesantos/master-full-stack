@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // FUNCTION DECLARATION
+
+
+// sayHello("Roxana", "Cestari", "30")
+
+// function sayHello(name, lastName) {
+//   console.log('Hello ' + name + lastName)
+// }
+
+// function getGradeMessage (grade) {
+// switch(grade) {
+//   case 5:
+//   case 6:
+//     console.log('Meh')
+//     break
+//   case 7:
+//   case 8:
+//     console.log('Good')
+//     break
+//   case 9:
+//   case 10:
+//     console.log('Excellent')
+//     break
+//    default:
+//      console.log('Failed')
+// }
+// }
+
+// getGradeMessage(6)
+// getGradeMessage("6")
+
+// ANNONYMOUS FUNCTIONS
+
+// function() {
+//   console.log('I am annonymous')
+// }
+
+// FUNCTION EXPRESSIONS
+
+// const annonymousFct = function() {
+//    console.log('I am annonymous')
+// }
+
+// annonymousFct()
+
+// function sum(a, b, afterFct) {
+//   console.log(a + b)
+//   afterFct()
+// }
+
+// sum(2,3, function(){console.log('The sum has finished')})
+
+
+// const annonymousFct = function() {
+//    console.log('I am annonymous')
+// }
+
+// function sum(a,b) {
+//   const result = a + b
+//   return result
+// }
+
+// function fctWithoutReturn(a, b) {
+//   console.log('Hello')
+// }
+
+// const sumResult = sum(2,3)
+// console.log("The result is ", sumResult)
+
+// const resultFct = fctWithoutReturn(2,3)
+// console.log(resultFct)
+
+// function sayHello() {
+//   return 'Hello'
+//   console.log('This will never get executed')
+// }
+
+// sayHello()
+// annonymousFct()
+// const annonymousFct = function() {
+//    console.log('I am annonymous')
+// }
+
+// const a = function() {
+//   console.log('hello')
+// }
+
+// a()
+
+// ARROW FUNCTIONS
+
+// const hello = (name) => console.log('Hello ' + name)
+// hello('Roxana')
+
+// const hello = function(name) {
+//   return console.log('Hello ' + name)
+// }
+// hello('Roxana')
+
+// ARRAY -> MAP method
+
+// const fruits = ['Apple', 'mangoes']
+// const fruitsUpperCase = fruits.map(fruit => fruit.toUpperCase())
+// console.log(fruitsUpperCase)
+
+
+// <h1>Title Section1<h1>
+// <h5>Description1</h5>
+// <a href='/home'>
+
+// <h1>Title Section2<h1>
+// <h5>Description2</h5>
+
+// <h1>Title Section3<h1>
+// <h5>Description3</h5>
+
+// ...
+// <h1>Title Section<h1>
+// <h5>Description</h5>
+
+// const sections = [
+//   {title: 'Title Section 1', description: 'Descr 1', link='/home'},
+//   {title: 'Title Section 2', description: 'Descr 2'},
+//   ...
+// ]
+  
+//   sections.map(section => (
+//   <h1>section.title<h1>
+//   <h5>section.description</h5>
+//   <a href=section.link>
+//   ))
+  
+  
+//  const data = [
+//   {name: 'Roxana', email: 'r@gmail.com', project: 'Project X'},
+//   ...
+// ]
+
+// data.map(user => (
+// <tr><td>user.name</td> <td>user.email</td>....
+// ))
+
+// about/me
+// users/Roxana
+
+// const goToMainSection(route) => {
+//   location.path("/users/Roxana".split('/')[1])
+//   ///
+// }
+
+// <button onClick={() => goToMainSection()}
+
+// const fruits = ['Apple', 'mangoes']
+
+// console.log(fruits.forEach(fruit => fruit.toUpperCase()))
+// console.log(fruits.map(fruit => fruit.toUpperCase()))
+// console.log(fruits)
+
+
+function getNumberOfVowels(word) {
+  let nrOfVowels = 0
+  word = word.toLowerCase()
+  
+  for(let i = 0; i < word.length; i++) {
+    if(word.charAt(i) === 'a' || word.charAt(i) === 'e' || word.charAt(i) === 'i'|| word.charAt(i) === 'o' || word.charAt(i) === 'u') {
+      nrOfVowels++
+    }
+  }
+  
+  return nrOfVowels
+}
+
+console.log(getNumberOfVowels('rOxana'))
+
+
+const myPerson = {
+  myName: 'Roxana',
+  sayName: function() {
+      console.log('Name')
+  }
+}
+
+myPerson.sayName()
+
+
+
+         
+                
+    </script>
+</body>
+</html>

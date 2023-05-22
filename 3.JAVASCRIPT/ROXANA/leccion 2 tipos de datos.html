@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // PRIMITIVAS  (PRIMITIVES)
+    // DATA INMUTABLE - ninguna propiedad y metodo aplicada, no le va cambiar el valor inicial
+
+
+// --> string: Los string son variables que almacenan cadenas de texto.
+// la expresion \n hace un salto de linea.
+// la expresion \t hace una tabulacion
+// si queremos que las expresiones \t y \n aparezca como cadenas, debemos añadir otrabarra invertida \\: \\t y \\n. lo mismo pasa con los apóstrofes, para mostrarlos hay que añadir \'.
+
+var myName = 'Roxana' //se utilizan '' o "" para encerrar un string.
+var myLastName = "Roxana"
+
+var shoppingList = "tomato \n apples \n melon"
+console.log(shoppingList)
+
+var a = "whatever \t whatever2"
+console.log(a)
+
+var ex = "tomato \\n apples \\n melon"
+console.log(ex)
+
+var b = "whatever \\t whatever2"
+console.log(b)
+
+console.log('I\'m right!')
+console.log("I'm right again!!")
+
+var longText = "Lorem Ipsum is simply dummy text of the printing and" + 
+"typesetting industry. Lorem Ipsum has been the industrys standard dummy text" +
+"ever since the 1500s, when an unknown printer took a galley"
+
+var longText2 = "Lorem Ipsum is simply dummy text of the printing and\
+typesetting industry. Lorem Ipsum has been the industrys standard dummy text\
+ever since the 1500s, when an unknown printer took a galley"
+
+console.log(longText)
+console.log(longText2)
+
+
+
+
+
+// --> number: cuidado al trabajar con número DECIMALES, al trabajar JS en base 2 con 64 bits, es posible que haya fallo al trabajar con decimales (ejemplo linea 61)
+
+var age = 30
+console.log(age)
+var cc = 2.3
+console.log(cc)
+
+
+var firstV = 0.1
+var secondV = 0.2
+console.log(firstV + secondV)
+
+
+// number.MAX_SAFE_INTEGER: concepto que indica hasta qué número entero JS es capaz de hacer comparaciones y operaciones de manera totalmente correcta
+console.log(Number.MAX_SAFE_INTEGER)
+var v2 = 9007199254740992
+var v3 = 9007199254740993
+console.log(v2 == v3)
+
+// NaN (Not a Number)
+console.log(0/0)
+
+
+
+
+
+// --> boolean - true o false. como buena práctica se suele utilizar como prefijos is y has.
+var isOld = true
+var hasKids = false
+
+
+
+
+// --> null
+var ss = null
+console.log(null)
+
+
+
+
+
+// --> undefined
+var whatever
+console.log(whatever)
+console.log(whatever+3) 
+
+
+
+
+// --> BigInt: para trabajar con numero mas alla del MAX_SAFE_INTEGER
+var v2 = 9007199254740992n
+var v3 = 9007199254740993n
+var v4 = BigInt(9007199254740993)
+console.log(v2 == v3)
+var v5 = 12n
+console.log(v5)
+
+
+
+
+// --> Symbol: te devuelve un valor único. se utiliza en objetos.
+console.log(Symbol())
+
+
+
+
+// METODOS Y PROPIEDADES
+
+// --> string methods
+
+// toUpperCase
+
+// const myName = 'Roxana'
+const myNameUpperCase = myName.toUpperCase()
+console.log(myNameUpperCase)
+console.log(myName)
+
+
+
+// toLowerCase
+
+// const myName = 'Roxana'
+const myNameLowerCase = myName.toLowerCase()
+console.log(myNameLowerCase)
+console.log(myName)
+console.log("4".toLowerCase())
+
+
+
+// charAt
+
+// const myName = 'Roxana'
+console.log(myName.charAt(3))
+
+
+
+// concat
+
+// const myName = 'Roxana'
+// const myLastName = 'Cestari'
+console.log(myName.concat(" ", myLastName))
+
+
+
+// startsWith & endsWith
+
+// const myName = 'Roxana'
+console.log(myName.startsWith('r'))
+
+
+
+// replace
+
+const myFullName = 'Roxana Lorint'
+console.log(myFullName.replace('Lorint', 'Cestari'))
+
+
+
+// --> string properties
+
+
+// length
+
+var myName = 'Roxana'
+console.log(myName.length)
+
+
+
+
+// --> number methods
+
+
+Number.isSafeInteger
+
+console.log(Number.isSafeInteger(9007199254740991))
+
+
+Number.isNaN
+
+var a = 0/0
+console.log(a)
+console.log(Number.isNaN(a))
+console.log(Number.isNaN(2))
+
+
+// toFixed
+
+var a = 3.45555
+console.log(a.toFixed(2))
+
+
+// --> number properties
+Number.MAX_SAFE_INTEGER
+console.log(Number.MAX_SAFE_INTEGER)
+
+
+
+// --> boolean methods
+
+
+toString
+
+var isOld = false
+var isOldString = isOld.toString()
+console.log(isOldString)
+console.log(isOld)
+
+
+
+
+typeof
+
+a ;
+console.log(typeof a)
+a = 4
+console.log(typeof a)
+a = true
+console.log(typeof a)
+
+a = {}
+console.log(typeof a)
+</script>
+<body>
+    
+</body>
+</html>

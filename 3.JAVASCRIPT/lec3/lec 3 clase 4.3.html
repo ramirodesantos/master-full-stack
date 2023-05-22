@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function cambiartexto(){
+            let cabeza = document.getElementById('encabezado');
+            cabeza.childNodes[0].nodeValue = "este es el nuevo encabezado";
+        }
+    </script>
+</head>
+<body>
+    <h1 id="encabezado">este es el encabezado original</h1>
+    <input type="button" value="cambiar texto" onclick="cambiartexto()">
+</body>
+</html>

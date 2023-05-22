@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar css</title>
+    <script src="../jquery-3.6.0.js"></script>
+<script>
+$(document).ready(function(){ //constante siempre que uses jquery
+    let boton = $("button");  //uso de vbles en jquery, igual que en vanila js
+    let cuadrado = $("#cuadrado");
+    boton.click(CambiarCuadrado);
+
+    function CambiarCuadrado(){
+        cuadrado.css("background" , "red");
+    }
+})
+
+
+
+
+</script>
+
+    
+</head>
+<body>
+    <button>cambiar color</button>
+    <section id="cuadrado" style="width: 400px; height: 400px; background:yellow"></section>
+</body>
+</html>

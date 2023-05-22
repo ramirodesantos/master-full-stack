@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lec 2 clase 4</title>
+    <!-- <script type="text/javascript" src="js/fichero.js"></script> esto para llamar a un archivo .js en el que tenamos desarrollado nuestro codigo -->
+<script>
+    // para ordenar un array usamos sort(), de momento no sabemos ordenarlo como queremos, nos ordena segun codigo ascii
+    let numeros= [1, 4, 23, 65, 2, 5, 199, 24];
+    console.debug(numeros.sort());
+
+    // concatener arrays
+    let concatenar_arrays;
+    let lapices = ["rojos" , "azules" ,"amarillos", "verdes"];
+
+    // forma incorrecta
+    concatenar_arrays = lapices + lapices;
+    console.log(concatenar_arrays, concatenar_arrays.length);
+
+    // forma correcta
+    let resultado = lapices.concat(lapices);
+    console.info(resultado, resultado.length);
+
+    let resultado2 = lapices.concat(lapices,numeros);
+    console.info(resultado2);
+
+    // operador ternario. interesante, poca gente conoce, se usa mucho en EEUU. se trata de un bucle if else descrito de la siguiente manera: (condicion) ? true:false
+    let importe1=500;
+    let importe2=600;
+    let precio_maleta= (importe2>importe1) ? importe1:importe2;
+    console.log(precio_maleta);
+
+    let oferta1=40;
+    let oferta2=66;
+    let precio_naranjas= (oferta1<oferta2) ? oferta1:oferta2;
+    console.log("el precio de las naranjas es: " + precio_naranjas);
+    // es lo mismo que decir:
+    if((oferta1<oferta2)==true) //siempre se evalúa a true, es redundante poner ==true
+    {
+        precio_naranjas=oferta1;
+    }else
+    {
+        precio_naranjas=oferta2;
+    }
+    console.log("el precio de las naranjas es: " + precio_naranjas);
+
+    // if ((oferta1 < oferta2) != true). poner que != true es lo mismo que poner ==false
+    if ((oferta1 < oferta2) == false)
+    {
+        precio_naranjas = oferta2;
+    }else
+    {
+        precio_naranjas=oferta1;
+    }
+    console.log("el precio de las naranjas es: " + precio_naranjas);
+
+    // funciones!!
+    // estructura de codigo que se puede llamar desde cualquier parte de la web, se puede reutilizar inclusive dentro de otras funciones. pueden tener argumentos o no tenerlos, pueden devolver alguna cosa o no hacerlo.
+
+    function primera_funcion()
+    {
+        console.info("he invocado mi primera funcion");
+    }
+    primera_funcion();
+
+    function segunda_funcion(numero1, numero2)
+    {
+        let suma=numero1 + numero2;
+        console.warn("la suma de los numeros es: " + suma);
+    }
+
+    segunda_funcion(5,1); //me devuelve el num por pantalla pero no podemos almacenar el valor de dicho num, para ello necesitamos un return y almacenar el valor de la funcion en una nueva variable, ver abajo.
+    // console.warn("la suma de los numeros es: " + suma); no va a funcionar //si queremos mostrar la suma no hay manera porque esa variable está definida dentro de la función, una vez ejecutamos la funcion, al estar definida por let, la variable suma no existe fuera del bloque de la funcion. si definimos la variable fuera del bloque de la función entonces si la coge ¨(tanto con let como con var, es raro, investigar).
+
+    function tercera_funcion(numero1, numero2)
+    {
+        let suma=numero1 + numero2;
+        return suma;
+    }
+
+    let sum= tercera_funcion(3,2);
+    console.warn("la suma es: " + sum);
+
+    let numero10 = 30;
+    let sum2= tercera_funcion(numero10,2);
+    console.warn("la suma es: " + sum2);  
+    
+    console.info("wololo")
+    // llamar a una funcion desde otra, ejemplo
+    function tercera_funcion(numero1, numero2)
+    {
+        let suma=numero1 + numero2 + numero1;
+        segunda_funcion(numero1, numero2)
+        return suma;
+    }
+    sum= tercera_funcion(3,2);
+    console.warn("la suma es: " + sum);
+
+    let i = "global";
+    function funcion1()
+    {
+      i="local";
+    //   return i;
+    }
+
+    console.log("i vale: " + i);
+    // ahora mismo i vale global pq no hemos llamado a nuestra funcion1
+
+    funcion1();
+    console.log("i vale: " + i);
+    // let devolucion_funcion1= funcion1(); siempre que haya un return, tenemos que recoger el valor que nos retorna en una variable fuera del bloque de la función.
+
+    // ahora i vale local porque la variable i está definida fuera de la función y js la coge de ahí, pero si dentro de la funcion definimos la variable como let i, volvería a valer global la variable está definida dentro dela funcion.ç
+    // mucho cuidado con esto, personalmente ahora mismo pienso que para evitar fallos con los nombres de las variables es bueno definirlas dentro de cada bloque (o funcion), para que si tenemos alguna variable previamente creada fuera de la función pero con el mismo nombre que otra que usamos fuera de la función, no nos modifique la variable externa a la funcion.
+
+    i= "global";
+    function funcion2()
+    {
+        let i = "local";
+        console.info("i dentro de la funcion vale: "+ i);
+    }
+    console.warn ("i vale " + i);
+    // ahora i vale global pq no hemos llamado a la funcion
+    funcion2()
+    // ahora i dentro de la funcion vale local, pero fuera, global.
+    console.warn ("i vale " + i);
+
+    function funcion3()
+    {
+        let t= "local";
+    }
+    funcion3();
+    // console.error(t); //como no está definida la t fuera de la funcion, nos da error.
+
+    function calculapreciototal(precio)
+    {
+        let impuestos = 1.21;
+        let gastos_de_envio=30;
+        let precio_total = precio*impuestos+gastos_de_envio;
+        console.log("el precio total es: " + precio_total);
+    }
+
+    calculapreciototal(100);
+
+    function dividir(dividendo,divisor)
+    {
+        if(puedodividir(divisor))
+        {
+            let division = dividendo/divisor;
+            return division;
+        }
+        else 
+        {
+            return false;
+        }
+    }
+
+    function puedodividir(numerodivisor)
+    {
+        let puedo;
+        numerodivisor===0 ? puedo=false : puedo=true;
+        return puedo;
+    }
+
+    if (dividir(400,0))
+    {
+        console.info("puedo dividir y el resultado es: " + dividir(400,2));
+    } else 
+    {
+        console.error("no puedo realizar la division")
+    }
+
+    // el num de argumentos que pasamos a la funcion debería ser el mismo que el num de argumentos que tiene definida la funcion. JS no muestra errores si se pasan más o menos parámetros de los definidos, si puede lo ejecuta. sin embargo, si estamos programando en modo extricto, JS nos exigirá que se pasen tantos argumentos como tenga definidos la funcion.
+
+
+
+    // funciones anónimas!!!!!
+    // son funciones que no tienen identificador (nombre) sin embargo funcionan. siempre deben tener un return.
+
+    let areadelcirculo = function (radio)
+    {
+        let area= 3.1415 * radio * radio;
+        return area;
+    }
+    console.log(" el area del circulo es: " + areadelcirculo(4));
+
+    let numero1=31;
+    let numero2=23;
+    let divisible = function()
+    {
+        let resultado;
+        // let numero1=31;
+        // let numero2=23;
+        numero2 === 0 ? resuldado=false : resultado= numero1/numero2;
+        console.log("el resultado es: "+resultado);
+        return resultado;
+    }
+    console.log(divisible());
+
+    // principios solidos de programacion, darle un ojo!!!!!!
+
+
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

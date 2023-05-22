@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function agregar()
+        {
+            let elemento = document.createElement('p');
+            let texto = document.createTextNode('en un lugar de la mancha')
+            elemento.appendChild(texto);
+            let objeto = document.getElementById('parrafo');
+            objeto.appendChild(elemento);
+        }
+
+    </script>
+</head>
+<body>
+    <div id="parrafo">
+
+
+    </div>
+    <input type="button" value="agregar nodos de tipo elemento" onclick="agregar()">
+</body>
+</html>

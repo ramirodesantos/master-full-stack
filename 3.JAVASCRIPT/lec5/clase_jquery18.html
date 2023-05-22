@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlaces</title>
+    <script src="../jquery-3.6.0.js"></script>
+    <style type="text/css">
+        .noticia{
+            width: 500px;
+            height: 200px;
+            border: 1px solid blue;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 10px;
+            color: green;
+            background-color: rgb(200,200,200);
+        }
+    </style>
+<script>
+
+ 
+    let d = $(document);
+    d.ready(procedimiento);
+
+    function procedimiento()
+    {
+        let p = $("#boton1");
+        p.click(añadir_fila_tras_tbody);
+        p = $("#boton2");
+        p.click(añadir_fila_antes_tbody);
+    }
+
+    function añadir_fila_tras_tbody()
+    {
+        let k = $("#mitabla>tbody");
+        k.append("<tr><td>añado fila despues de cabecera</tr></td>");
+    }
+
+    function añadir_fila_antes_tbody()
+    {
+        let k = $("#mitabla>tbody");
+        k.prepend("<tr><td>añado fila antes de cabecera</tr></td>");
+    }
+
+    
+
+
+</script>
+    
+</head>
+<body>
+    <button id="boton1">añadir filas despues del tbody</button>
+    <button id="boton2">añadir filas antes del tbody</button>
+    <table id="mitabla">
+        <tbody>
+            <tr>
+                <td>cabecera</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>pie de pagina</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

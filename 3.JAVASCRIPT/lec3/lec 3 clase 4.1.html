@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    function miraparrafos()
+    {
+        let parrafo = document.getElementsByTagName("p");
+        alert('el primer parrafo es: ' + parrafo[0].childNodes[0].nodeValue);
+        alert('el segundo parrafo es: ' + parrafo[1].childNodes[0].nodeValue);
+    }
+
+
+</script>
+
+</head>
+<body onload="miraparrafos()">
+    <p>este es el primer parrafo</p>
+    <p>este es el segundo parrafo</p>
+    <p>este es el tercer parrafo</p>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 2 JS</title>
+    <!-- <script type="text/javascript" src="js/fichero.js"></script> ASÍ SE DEFINE UN SCRIPT JS Y CON src SE RELACIONA CON EL FICHERO .JS QUE TENGAMOS CREADO, COMO EN CSS -->
+
+    <script>
+// definir una constante. es bueno poner en MAYUSCULAS el identificador de una constane. para definirla const xxx
+        const NUMERO_PI = 3.1416; 
+        console.log("el numero pi vale: " + NUMERO_PI);
+
+        // NUMERO_PI = 20; da fallo de consola. no puedes redefinir una constante
+
+        // las comprobaciones se realizan con bloques "if"
+        let Valor1 = 10;
+        let Valor2 = 10;
+        // para asignar =  
+        // para comparar ==
+        if(Valor1==Valor2){
+            console.log("Valor1 y valor2 son iguales y valen: " + Valor1 ,"y", Valor2)
+        }
+
+        Valor1 = 10;
+        Valor2 = 20;
+        if(Valor1==Valor2){
+            console.log("Valor1 y valor2 son iguales y valen: " + Valor1 ,"y", Valor2);
+        } else{
+            console.log("valor1 y valor 2 son distintos y valen: "+ Valor1, "y", Valor2);
+        }
+
+
+            // bucle if ejecuta toda la instrucción aunque encuentre la condición. si hay muchos if en una web puede quedarse colgada
+
+        let teclado1 = 40;
+        let teclado2 = 50; 
+        let teclado3 = 20;
+
+        if (teclado3<teclado1){
+             console.log("el teclado 3 es menor que el teclado 1.");
+        }else if(teclado3<teclado2){
+            console.log("el teclado 3 es menor que el teclado 4.");
+        }else if(teclado1>teclado2){
+            console.log("el teclado 1 es mayor que el teclado 2.");
+        }else{
+            console.log("no hay manera");
+        }
+
+            // bucles switch para comparar condiciones. se ejecuta más rápidamente pero es menos potente que el if.
+
+            let nombre1 = "alfonso"
+            let nombre2 = "daniel"
+            let nombre3 = "arturo"
+            let nombre4 = "juan"
+
+            switch (nombre4){
+                case "alfonso":
+                console.log("el nombre4 es juan");
+                break;
+                case "daniel":
+                console.log("el nombre4 es daniel");
+                break;
+                case "arturo":
+                console.log("el nombre4 es arturo");
+                break;
+                case "juan":
+                console.log("el nombre4 es juan");
+                break; // mira lo que pasa si comentas el break, no sale del bucle y te puesta tanto esta condición como la siguiente, porque no nos salimos al encontrar la condicion.
+                default:
+                console.log("no lo he encontrado");
+                }
+
+                    // bucles for
+
+                    for( let n = 0; n<40 ; n= n+3){
+                        console.log("el numero n es: " + n);
+                    }
+                    
+
+                    // el while
+                    let raton1 = 71;
+                    while (raton1<=70){
+                        console.log("este raton1 es baratito, menor o igual que 70 y vale: " + raton1);
+                        raton1 += 5;
+                    }
+
+                    // while (true){
+                    //     console.log("esto se cuelga.");
+                    // }
+
+                    // bucle do/while. al menos, se ejecuta una vez.
+
+                    let n1 = 3999;
+                    do{
+                        if (n1<4010){
+                        console.log("estamos en rango y el valor de n1 es: "+ n1);
+                        }
+                        n1++
+                    // }while(n1<4003)
+                    }while(n1<4000){   
+                        console.log("tambien nos vale el valor: " + n1)
+                    }
+
+                    // vamos a crear un array con hortalizas
+
+                    let hortalizas = new Array() //lo crea vacio. tamano el que sea, a tope
+                    hortalizas = ["tomate","zanahoria","patatas"]  //lo podemos llenar una vez creado vacío, o crearlo con un let delante y definirlo directamente
+
+                    // vamos a ver como calcular la longitud de un vector
+                    let numero_hortalizas = hortalizas.length;
+                    console.log("el numero de hortalizas es: "+numero_hortalizas);
+                    console.log("las hortalizas contenidas en el array hortalizas son: " + hortalizas[0],hortalizas[1],hortalizas[2]);
+
+                    // vamos a hacer lo mismo que arriba pero con el bucle for
+                    for ( k=0; k<numero_hortalizas; k++){
+                        console.log("el valor de la hortaliza en la posicion", k, "es: ", hortalizas[k]);
+                    }
+                    console.log("el ultimo elemento es: " + hortalizas[numero_hortalizas-1]);
+
+                    //  para añadir un nuevo elemento a la primera posicion del vector desplazando los demás a la derecha.
+
+                    hortalizas.unshift("ajos");
+                    console.log("nuevo primer elemento es: " + hortalizas[0]);
+
+                    // para añadir un nuevo elemento al final del vector
+                    hortalizas.push("apio") //hay que tener cuidado porque la dimensión del vector ha cambiado y ahora la variable numero_hortalizas está desactualizada. hay que volver a calcularla
+                    numero_hortalizas=hortalizas.length; //.length para conocer la longitud de un array
+                    console.log("ultimo elemento vector hortalizas es: " + hortalizas[numero_hortalizas-1]);
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

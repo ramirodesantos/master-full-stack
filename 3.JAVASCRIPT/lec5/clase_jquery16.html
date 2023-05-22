@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlaces</title>
+    <script src="./jquery-3.6.0.js"></script>
+    <style type="text/css">
+        .noticia{
+            width: 500px;
+            height: 200px;
+            border: 1px solid blue;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 10px;
+            color: green;
+            background-color: rgb(200,200,200);
+        }
+    </style>
+<script>
+
+
+    let d = $(document);
+    d.ready(procedimiento);
+
+    function procedimiento()
+    {
+        let p = $("#boton1");
+        p.click(asociar_estilo);
+        p = $("#boton2");
+        p.click(disociar_estilo);
+    }
+
+    function asociar_estilo()
+    {
+        let k = $("#articulo");
+        k.addClass("noticia"); //sin poner el .
+    }
+
+    function disociar_estilo()
+    {
+        let k = $("#articulo");
+        k.removeClass("noticia"); //sin poner el .
+    }
+
+
+</script>
+    
+</head>
+<body>
+    <button id="boton1">ponemos estilo</button><br>
+    <button id="boton2">quitamos estilo</button><br>
+    <div id="articulo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat sit vel, consequatur eum repudiandae illo possimus unde id illum. Quisquam.</div>
+</body>
+</html>

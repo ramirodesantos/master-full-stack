@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function insertarenmedio()
+        {
+            let elemento = document.createElement('p');
+            let nodotexto = document.createTextNode('parrafo entre el segundo y el tercero');
+            elemento.appendChild(nodotexto);
+            let parrafo3 = document.getElementById('p3');
+            let idcapa = document.getElementById('capa');
+            idcapa.insertBefore(elemento, parrafo3);
+        }
+
+    </script>
+</head>
+<body>
+    <div id="capa">
+        <p>este es el parrafo 1</p>
+        <p>este es el parrafo 2</p>
+        <p id="p3">este es el parrafo 3</p>
+        <p>este es el parrafo 4</p>
+        <p>este es el parrafo 5</p>
+    </div>
+    <input type="button" value="insertar un parrafo entre el segundo y tercer parrafos"
+    onclick="insertarenmedio()">
+</body>
+</html>

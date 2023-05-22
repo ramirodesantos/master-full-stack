@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    // primer método, con una funcion y la palabra clave this
+    function Manzana(tipo)
+    {
+        this.marca = tipo;
+        this.color="roja";
+    }
+    var golden = new Manzana("golden");
+    console.log("el objeto manzana es de tipo " + golden.marca + " " + golden.color);
+
+    // segundo método
+    var sandia =
+    {
+        tipo: "de agua",
+        color: "rojo"
+    };
+
+    // sandia.tipo = "sin pepitas"
+    console.log("el objeto sandia es de tipo " + sandia.tipo);
+
+    // tercer método, declanrando una clase en js
+    class coche
+    {
+        constructor(modelo)
+        {
+            this.modelo = modelo;
+            this.color = "rojo";
+        }
+    }
+
+    var carro = new coche ("ford_focus");
+    console.log("el modelo de coche es: " + carro.modelo + " de color " + carro.color);
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

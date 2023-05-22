@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    //    let XMLhttpRequest = false; 
+    let XHR = false;
+    if(window.XMLHttpRequest)
+    {
+        XHR = new XMLHttpRequest();
+    }else if (window.ActiveXObject)
+    {
+        XHR = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+    function pedirdatos(fuentededatos, divdestino)
+    {
+        if(XHR)
+        {
+            let objeto = document.getElementById(divdestino);
+            /*
+            formas de envio de formulario:
+            1)GET: se caracteriza porque cuando envia la informacion, lo hace a través de la URL. al hacerlo por la url todo el mundo puede verlo, peligroso, facil de hackear.
+
+            2)POST:  tola la informacion está codificada en la cabecera del archivo.
+                -malo: si refrescas te preguntan ¿deseas reenviar los datos del formulario?, igual no queremos que se reenvien de nuevo (ej: transferencian bancaria, podemos duplicarla)
+
+
+            */
+            XHR.open("GET" , "fuentededatos");
+            XHR.onreadystatechange = function()
+            {
+                if (XHR.readyState == 3)
+                {
+                    console.log("estado 3");
+                }
+                if (XHR.readyState == 4 && XHR.status == 200) //siempre que una web está lista para mostrarse tiene un estado 200
+                {
+                    objeto.innerHTML = XHR.responseText;
+                }
+            }
+            XHR.send(null);
+        }
+    }
+    </script>
+</head>
+<body>
+    <h1>mostrando datos con Ajax</h1>
+    <form action="">
+        <input type="button" value="Mostrar mensaje" onclick="pedirdatos('datos.txt','capadestino')">
+    </form>
+    <div id="capadestino" style="background-color: green;">
+        <p>aqui debe aparecer el texto</p>
+    </div>
+</body>
+</html>

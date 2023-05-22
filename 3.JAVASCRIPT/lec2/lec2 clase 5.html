@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lec 2 clase 5</title>
+<script>
+    let dividendo=31;
+    let divisor=1;
+    let division = function()
+    {
+        let resultado;
+        divisor === 0 ? resultado = false : resultado = dividendo / divisor;
+        console.info("dividendo: " + dividendo);
+        console.info("divisor " + divisor);
+        if(resultado == false)
+        {
+            console.error("no se puede dividir");
+        }else
+        {
+            console.warn("el resultado es: " + resultado)
+        }
+        return resultado;
+    }
+    console.log(division());
+
+    if(division == false)
+    {
+        console.error("no se puede dividir");
+    }else
+    {
+        console.warn("el resultado es: " + division())
+    }
+
+    let area_circulo = function(radio)
+    {
+        let area=3.1415 * radio * radio;
+        return area;
+    }
+
+    console.log("el area del circulo es: " + area_circulo(4))
+    
+    // vamos a volver al tema de ordenar arrays con sort() ahora que hemos visto las funciones anonimas.
+    // => es lo mismo que escribir function(x,y)
+    let numeros = [2, 5 ,9 ,21, 53, 62, 75, 93];
+    numeros.sort((x,y) =>
+    {
+        if(x==y)
+        {
+            return 0;
+        }
+        if(x<y)
+        {
+            return -1;
+        }
+        return 1;
+    });
+    console.warn(numeros);
+
+    // billetes de curso legal
+    let billetes = [5,10,50,20,500,200,100];
+    // ordenacion ascendente
+    billetes.sort(function(x,y)
+    {
+        if (x==y) {return 0;} //no hace nada
+        if (x<y) {return-1;} //lo coloca antes
+        return 1; 
+    })
+    console.error("el array de billetes orden ascendnte es: " + billetes);
+
+    // ordenacion descendente
+    billetes.sort(function(x,y)
+    {
+        if (x==y) {return 0;} //no hace nada
+        if (x>y) {return-1;} //lo coloca antes
+        return 1; 
+    })
+    console.error("el array de billetes orden dedscendente es: " + billetes);
+
+    // forEach es un metodo que sirve para aplicar una modificacion a cada uno de los elementos de un array, o para recorrerlo.
+    let naranjas = [10, 15, 50, 75];
+    naranjas.forEach(function(valor,indice,array)
+    {
+        console.log("el varlor " + valor + " corresponde al indice " + indice);
+        array[indice]=valor*2;
+        // console.log("el varlor " + valor + " corresponde al indice " + indice);
+        // console.log(naranjas);
+    })
+    console.log(naranjas);
+
+    // objeto nativo Date!!!!
+    let hoy = new Date();
+    console.log("la fecha de hoy es: " + hoy);
+
+    let anno = new Date(2021,09,30);
+    console.warn("la fecha indicada es: "+anno);
+
+    anno = new Date(2022,04,25);
+    console.warn("la fecha indicada es: "+anno);
+    // cuidado porque los meses enpiezan en 00, es como el indice que recorre un array, empieza en 0 y no en 1.
+
+    // el numero del mes
+    console.info("el numero del mes: "+ hoy.getMonth()); //nos devuelve un 4, es correcto, ya que los meses empiezan en 0 y estamos en mayo (5). si queremos que nos devuelva el nombre del mes, hay que hacer un switch indicando que 0 es enero, 1 es febrero etc.
+
+    console.warn("el año actual es: " + hoy.getFullYear());
+
+    // una fecha más exacta
+    let fecha_exacta= new Date(1992,02,13,10,30,53);
+    console.info("la fecha exacta es: " + fecha_exacta);
+    // vamos a meter una fecha que no exista, el 40 de mayo, a ver que pasa
+    fecha_exacta = new Date (2022,04,40);
+    console.log("la fecha 40 de mayo es: " + fecha_exacta); //lo que pasa es que no da error, sino que coge la fecha como 9 de junio...ojo!
+
+    // vamos a coger el dia de la semana
+    console.info("el dia de la semana es: " + hoy.getDay()); //los dias comienzan en 0 el domingo y terminan en 6 el sabado!!!!!!!
+
+    console.error("¿qué hora es? " + hoy.getHours() + ":" + hoy.getMinutes());
+
+    // calcular el num de milisegundos sirve para comparar fechas. si las comparas a lo bruto (if (fecha1>fecha2)) puede fallar, comparar siempre usando milisengundos
+    console.info("el numero de milisegundo desde el 01/01/1970 es: " + hoy.getTime());
+
+
+    let fecha1 = new Date(2016,04,11);
+    let fecha2 = new Date(1972,06,08);
+
+    // esta forma suele fallar
+    if(fecha1>fecha2)
+    {
+        console.log("fecha1 es: " + fecha1 + " y fecha2 es: " + fecha2);
+    }else
+    {
+        console.log("no está comparando bien");
+    }
+
+
+    // esta forma es la buena para comparar fechas
+    if (fecha1.getTime() > fecha2.getTime())
+    {
+        console.log("fecha1 es mayor que fecha2");
+    }else{
+        console.log("fecha2 es mayor que fecha1");
+    }
+
+    // cuadros de dialogo (del objeto window). hay 3 cuadros de dialogo. Alert, Confirm y Prompt
+    // Alert: muestra un cuadro de dialogo donde solo aparece el boton de aceptar.
+
+    alert("mi primer cuadro de dialogo");
+    alert("mi segundo cuadro de dialogo");
+    // cuidado con meter un cuadro de dialogo en un bucle, puede estar saltando muchas veces
+    let saludo = "hola buenas tardes";
+    alert("buenas tardes " + saludo);
+    // salto de linea con \n
+    alert("esta es la primera \'linea\'\ny esta se la segunda \\linea");
+    // cadenas de escape:
+    // \n : salto de linea
+    // \t : tabulacion
+    // \' : comilla simple
+    // \" : comilla doble
+    // \\ : barra invertida
+
+    // para los caracteres especiales en js ir a tipesof.com/caracteres-especiales-en-javascript/. se usa \xA9 o el caracter que sea, pero primero ponemos \x..
+    alert("esta web tiene \xA9");
+
+    // vamos a ver confirm
+    if(confirm("presiona aceptar para formatear el disco duro"))
+    {
+        alert("se procede a borrar el disco")
+    }else
+    {
+        alert("cobarde!!, pecadoorrrr de la pradera")
+    }
+
+    // vamos a ver el prompt
+    let pregunta = prompt("introduce tu año de nacimiento", 2002);
+    let edad = hoy.getFullYear()-pregunta;
+    alert("has introducido el año " + pregunta + " y tu edad es: " + edad);
+
+
+
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

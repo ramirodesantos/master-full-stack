@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // OBJETOS (OBJECTS)
+// Forma de crear objetos usando object literal
+
+// var emptyObject = {}
+
+// var myPerson = {
+//   firstName: 'Roxana',
+//   lastName: 'Cestari',
+//   age: 30,
+//   hasKids: false,
+//   isMarried: true
+// }
+
+// console.log(myPerson)
+
+// var myHouse = {
+//   color: "pink",
+//   numberOfWindows: 4,
+//   peopleLivingIn: 2
+// }
+
+// var a = {1: 'whatever'}
+// console.log(a)
+// var b = {true: 'whatever'}
+// console.log(b)
+
+// var arrayWithObject = [{name: 'r'}]
+// var arrayWithArray = [[2]]
+
+// var sim = Symbol()
+// var x = {
+//   [sim]: '1'
+// }
+
+// var firstNameVar = 'firstName'
+// var myOb = {
+//   [firstNameVar]: 'Roxana'
+// }
+
+// console.log(myOb)
+
+
+
+// // ACCEDER A PROPIEDADES
+
+// // Notacion por punto
+
+// console.log('My name is ' + myPerson.firstName)
+// console.log('I am ' + myPerson.age)
+
+
+
+// //Notacion por []
+
+// console.log('My name is ' + myPerson["firstName"])
+// console.log('I am ' + myPerson["age"])
+
+// var desiredProperty = "firstName"
+// console.log(myPerson.desiredProperty)
+// console.log(myPerson[desiredProperty])
+
+// myHouse.color = "yellow"
+// console.log(myHouse)
+
+
+
+
+// // ANADIR PROPIEDADES
+// myPerson.husbandName = 'Daniel'
+// console.log(myPerson)
+
+// myPerson.firstName = 'Rox'
+// console.log(firstName)
+
+
+
+// // QUITAR PROPIEDADES
+// delete myPerson.hasKids
+// console.log(myPerson)
+
+// console.log(typeof myPerson)
+
+
+
+
+
+// // METODOS DE OBJECT
+// --> Object.entries
+// console.log(Object.entries(myPerson))
+
+
+// --> Object.keys
+// console.log(Object.keys(myPerson))
+
+
+// --> Object.seal
+// Object.seal(myPerson)
+// console.log(myPerson)
+
+// myPerson.bla = "bla"
+// console.log(myPerson)
+
+// delete myPerson.lastName
+// console.log(myPerson)
+
+// myPerson.firstName = "Roxy"
+// console.log(myPerson)
+
+
+
+// --> Object.isSealed
+// console.log(Object.isSealed(myPerson))
+
+
+// --> Object.freeze
+// var myCar = {
+//   model: 'Ford',
+//   year: 2019
+// }
+
+// Object.freeze(myCar)
+// myCar.model = 'Audi'
+// console.log(myCar)
+
+
+// --> Object.isFrozen
+// console.log(Object.isFrozen(myCar))
+
+
+
+
+
+// ARRAYS (ARREGLOS)
+
+
+// Forma de crear arrays usando array literal
+
+// var myArray = ["Audi", "Ford"]
+// console.log(myArray)
+// var mixedArray = ["Audi", 2, true]
+// console.log(mixedArray)
+
+// var a = new Array("Ford", "Audi")
+// var b = new Array(2,3,4,5,6)
+// console.log(b)
+
+// var c = new Array(2)
+// console.log(c)
+
+
+
+// ACCESO A ELEMENTOS
+// console.log(myArray[0])
+
+// CAMBIAR ARRAY
+// myArray[0] = "BMW"
+// console.log(myArray)
+// var d = new Array(2)
+// console.log(d)
+
+
+
+// PROPIEDADES DE ARRAYS
+// --> length
+// console.log(myArray.length)
+// var x = ["audi", undefined, null, "bmw"]
+// console.log(x.length)
+
+
+// METODOS DE ARRAYS
+// --> push
+// myArray.push("BMW")
+// console.log(myArray)
+
+// --> splice / slice
+
+
+// console.log(myArray.unshift('bla'))
+// console.log(myArray)
+
+// --> pop
+// console.log(myArray.pop())
+// console.log(myArray)
+
+
+// -------------------------
+  
+  // lo siguiente crea un objeto, no un string
+  // var stringObj = new String("Roxy")
+  // console.log(stringObj)
+  // console.log(typeof stringObj)
+  
+  // lo siguiente crea un objeto, no un number
+  // var numberObj = new Number(3)
+  // var n = 3
+  // console.log(3)
+  // console.log(numberObj)
+  // console.log(typeof numberObj)
+  
+  //var desiredProperty = "firstName"
+  //var desiredProperty = "bla"
+  var myPerson = {
+    firstName: 'Roxana',
+    age: 30
+  }
+  
+  // myPerson.firstName
+  console.log(myPerson["firstName"])
+  console.log(myPerson[desiredProperty])
+  console.log(myPerson)
+    </script>
+    
+</body>
+</html>

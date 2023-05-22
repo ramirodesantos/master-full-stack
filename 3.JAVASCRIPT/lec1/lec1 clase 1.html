@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clase 1</title>
+<script>
+    // comentario de una linea
+
+    /* comentario de
+    varias lineas
+    ejemplo */
+
+    // con "var" definimos variables para toda la pagina web, puede ocasionar problemas de seguridad
+    // con "let" definimos variables que solo existen en el módulo en el que están llamadas, la vida de la variable es finita, cuando se deja de usar se destruye.
+    let Variable1 = "trolaso";
+    console.log("la Variable1 vale: " + Variable1);
+
+    let Numeropi="3.1416";
+    console.log("El número pi es: " + Numeropi);
+
+    // no se puede definir varias veces una variable. si deseamos volver a llamarla o modificar su contenido, solo hay que escribir el identificador, no escribir let+identificador pq eso sería definirla de nuevo
+
+    Numeropi = 16;
+    console.log("El numero pi es : " + Numeropi);
+
+    let suma = 0;
+    let numero1 = 10;
+    let numero2 = 50;
+    suma = numero1 + numero2;
+    console.log("La suma es: " + suma);
+
+    let resta = 0;
+    resta = numero1 - numero2;
+    console.log("La resta es: " + resta);
+
+    let multiplicacion = 0;
+    multiplicacion = numero1 * numero2;
+    console.log("La multiplicacion es: " + multiplicacion);
+
+    let division = 0;
+    division = numero1 / numero2;
+    console.log("La division es: " + division , Variable1 ,"el primo es un: ", Variable1);
+
+    let modulo= 0;
+    modulo = numero1 % 4;
+    console.log("el valor del modulo es : " + modulo);
+
+    modulo++;
+    console.log("el valor del modulo + 1 es: " + modulo);
+
+    modulo--;
+    console.log("el valor del modulo - 1 es: " + modulo);
+
+    let numero3 = 50;
+    numero3 += 10;
+    console.log("el numero3 + 10 es igual a :" + numero3);
+
+    numero3 /= 3;
+    console.log("el numero3 entre 3 es igual a :" + numero3);
+
+    numero3 %= 6;
+    console.log("el resto de numero3 entre 6 es: " + numero3);
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

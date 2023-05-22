@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlaces</title>
+    <script src="./jquery-3.6.0.js"></script>
+<script>
+
+
+    let d = $(document);
+    d.ready(procedimiento);
+
+    function procedimiento()
+    {
+        let p = $("#boton1");
+        p.click(ponedetras);
+        p = $("#boton2");
+        p.click(ponedelante);
+        p = $("#boton3");
+        p.click(ponedelante_deelemento);
+        p = $("#boton4");
+        p.click(ponedetras_deelemento);
+    }
+
+    function ponedetras()
+    {
+        let k = $("p");
+        k.append("texto detras");
+    }
+
+    function ponedelante()
+    {
+        let k = $("p");
+        k.prepend("texto delante");
+    }
+
+    function ponedetras_deelemento()
+    {
+        let k = $("p");
+        k.after("texto detras de elemento");
+    }
+
+    function ponedelante_deelemento()
+    {
+        let k = $("p");
+        k.before("texto delante de elemento");
+    }
+    
+</script>
+    
+</head>
+<body>
+    <button id="boton1">añadir detras</button><br>
+    <button id="boton2">añadir delante</button><br>
+    <button id="boton3">añadir detras de otro elemento</button><br>
+    <button id="boton4">añadir delante de otro elemento</button><br>
+    <p>este es el texto original</p>
+</body>
+</html>

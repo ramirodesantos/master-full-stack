@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+function cantidadhijos()
+{
+    let lista = document.getElementById("bloque de parrafos");
+    alert("la cantidad de hijos del nodo (div): " + lista.childNodes.length);
+    let cadena = "";
+    for (let t = 0 ; t < lista.childNodes.length ; t++)
+    {
+        if (lista.childNodes[t].nodeType == Node.TEXT_NODE)
+        {
+            cadena = cadena + "nodo tipo texto \n";
+        }
+        if (lista.childNodes[t].nodeType == Node.ELEMENT_NODE)
+        {
+            cadena = cadena + "nodo tipo elemento \n";
+        }
+        if (lista.childNodes[t].nodeType == Node.COMMENT_NODE)
+        {
+            cadena = cadena + "nodo tipo comment \n";
+        }
+        if (lista.childNodes[t].nodeType == Node.DOCUMENT_NODE)
+        {
+            cadena = cadena + "nodo tipo documento \n";
+        }
+        if (lista.childNodes[t].nodeType == Node.ATTRIBUTE_NODE)
+        {
+            cadena = cadena + "nodo tipo atributo \n";
+        }
+    }
+    alert(cadena);
+}
+
+</script>
+
+
+</head>
+<body>
+    <div id="bloque de parrafos">
+        <p>este es el primer parrafo</p>
+        <p>este es el segundo parrafo</p>
+        <p>este es el tercer parrafo</p>
+    </div>
+    <input type="button" value="cantidad de hijos del div" onclick="cantidadhijos()">
+</body>
+</html>

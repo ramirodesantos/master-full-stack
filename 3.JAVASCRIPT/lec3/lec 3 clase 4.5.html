@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    /*
+    definir un elemento h1 con el texto "10"
+    luego, rescatar el valor que tiene el nodo de texto con un botón, convertirlo a entero con la funcion parseInt()
+    sumarle cinco y asignarselo a la propiedad nodeValue del nodod e texto (como si fuera un contador)
+    */
+   function hazlasuma()
+   {
+       let valorh1 = document.getElementById('calculadora');
+       let valorh2 = parseInt(valorh1.childNodes[0].nodeValue) + 5;
+        // let valorh2 = parseInt(valorh1.childNodes[0].nodeValue + 5); // para concatenar
+        valorh1.childNodes[0].nodeValue= valorh2;
+   }
+</script>
+
+</head>
+<body>
+    <h1 id="calculadora">10</h1>
+    <input type="button" value="le añade 5" onclick="hazlasuma()">
+</body>
+</html>
