@@ -1,0 +1,43 @@
+.navbar a.link{
+    color: green;
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    padding: 7px 20px;
+}
+
+.navbar a.link:hover{
+    text-decoration: underline;
+}
+
+main{
+    min-height: 80vh;
+    padding: 30px;
+}
+
+.errorValidations{
+    background-color:rgb(245, 195, 195);
+    color: red;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.unDisplayForm{
+    display:none;
+}
+
+.navbar a.link.active{
+    text-decoration: underline;
+}
+
+nav ul img{
+    max-width: 35px;
+    max-height: 35px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+
+
+
+

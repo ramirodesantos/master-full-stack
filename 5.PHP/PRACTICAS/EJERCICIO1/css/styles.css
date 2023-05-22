@@ -1,0 +1,21 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+ul p{
+ color: blue;
+ font-size: 20px;
+ text-align: center;
+ margin-bottom: 5px;
+}
+
+li{
+    list-style-type: square;
+}

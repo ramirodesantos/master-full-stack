@@ -1,0 +1,28 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+    max-width: 1200px;
+}
+
+.tablero{
+display: grid;
+grid-template-columns: repeat(9,20px);
+}
+
+.recuadro{
+    width: 20px;
+    height: 20px;
+    border: solid 1px black;
+}
+
+.negro{
+    background-color: black;
+}
+
+.blanco{
+    background-color: white;
+}
