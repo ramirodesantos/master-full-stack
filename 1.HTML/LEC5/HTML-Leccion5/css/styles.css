@@ -1,0 +1,60 @@
+body {
+  accent-color: red;
+}
+
+section {
+  padding: 15px;
+  border-radius: 10px;
+  background-color: rgb(238, 238, 238);
+  margin: 10px;
+}
+
+label {
+  font-size: 14px;
+}
+
+.required:before {
+  content: "*";
+}
+
+.order-reversed {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+input:required + label:before {
+  content: "*";
+}
+
+.checkbox-container {
+  display: flex;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  margin-right: 10px;
+}
+
+.radiobutton-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+input,
+textarea {
+  display: block;
+  border-radius: 5px;
+  border: 1px solid rgb(194, 194, 194);
+  padding: 10px;
+  width: 250px;
+  margin-bottom: 20px;
+}
+
+input[type="range"] {
+  padding: 0;
+}
+
+input:focus {
+  outline-color: blue;
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios</title>
+    <meta name="description" content="Formularios web HTML" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <main>
+        <section>
+            <h1>Formularios web</h1>
+            <form action="/api/process-data.php" method="post" enctype="multipart/form-data">
+                <!-- Atributo FOR para enlazar con el input asociado -->
+                <label for="type-text">Texto:</label>
+                <!-- TYPE para indicar el tipo de input
+                ID para enlazar con la label
+                NAME, nombre del input para procesarlo en el back (name/value)
+                VALUE, por lo general, a rellenar poir el usuario -->
+                <input type="text" id="type-text" name="user-name" disabled />
+
+                <!-- Tipos de inputs -->
+                <div class="order-reversed">
+                    <input type="email" id="type-email" name="email" placeholder="Email" required />
+                    <label for="type-email">Email:</label>
+                </div>
+
+                <label for="type-password">Password:</label>
+                <input type="password" id="type-password" name="password" />
+
+                <label for="type-tel">Telephone:</label>
+                <input type="tel" id="type-tel" name="tel" pattern="\([0-9]{3}\) [0-9]{3}[ -][0-9]{4}"
+                    title="A valid telephone number consist of a 3 digits code area between brackets, a space, the three first digits of the number, a space or hypen (-), and four more digits" />
+
+                <label for="search">Search:</label>
+                <input type="search" id="search" name="search" />
+
+                <label for="url">URL:</label>
+                <input type="url" id="url" name="url" value="https://" disabled />
+
+                <label for="number">Number:</label>
+                <input type="number" id="number" name="number" min="0" max="5" />
+
+                <label for="range">Range:</label>
+                <input type="range" id="range" name="range" min="0" max="10" step="2" />
+
+                <label for="file">File:</label>
+                <input type="file" id="file" name="file" accept=".png, .jpeg" multiple />
+
+                <!-- <input type="image" src="img/submit.png" /> -->
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" />
+
+                <label for="week">Week:</label>
+                <input type="week" id="week" name="week" />
+
+                <label for="month">Month:</label>
+                <input type="month" id="month" name="month" />
+
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" />
+
+                <label for="datetime-local">Time:</label>
+                <input type="datetime-local" id="datetime-local" name="datetime-local" min="2021-12-25T00:00"
+                    max="2022-01-06T23:59" />
+
+                <label for="color">Color:</label>
+                <input type="color" id="color" name="time" />
+
+                <!-- Textarea -->
+                <textarea name="textarea" id="textarea" cols="30" rows="10">
+                Mensaje:</textarea>
+
+                <select name="select" id="select" multiple size="3">
+                    <optgroup label="Europa">
+                        <option value="Francia">Francia</option>
+                        <option value="Alemania">Alemania</option>
+                        <option value="Italia">Italia</option>
+                    </optgroup>
+                    <optgroup label="América">
+                        <option value="Mexico">Mexico</option>
+                        <option value="Venezuela">Venezuela</option>
+                        <option value="Colombia">Colombia</option>
+                    </optgroup>
+                </select>
+                <br><br>
+
+                <!-- Datalist -->
+                <label for="myBrowser">Choose a browser from this list:</label>
+                <input list="browsers" id="myBrowser" name="myBrowser" />
+                <datalist id="browsers">
+                    <option value="Chrome">
+                    <option value="Firefox">
+                    <option value="Internet Explorer">
+                    <option value="Opera">
+                    <option value="Safari">
+                    <option value="Microsoft Edge">
+                </datalist>
+
+                <!-- Checkbox -->
+                <div class="checkbox-container">
+                    <input type="checkbox" id="accept" name="accept">
+                    <label for="cookies"> Acepto la política de cookies.</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="accept" name="accept">
+                    <label for="cookies"> Acepto la política de cookies.</label>
+                </div>
+                <br>
+
+                <!-- Radio button -->
+                <label class="radiobutton-container" for="html">
+                    <input type="radio" id="html" name="language" value="HTML">
+                    HTML
+                </label>
+                <label class="radiobutton-container" for="css">
+                    <input type="radio" id="css" name="language" value="CSS">
+                    CSS
+                </label>
+                <label class="radiobutton-container" for="js">
+                    <input type="radio" id="js" name="language" value="JS">
+                    JS
+                </label>
+
+                <!-- Botones -->
+                <input type="button" value="Botón" />
+                <button type="button">Botón</button>
+
+                <input type="submit" value="Enviar" />
+                <input type="reset" value="Reset" />
+                <input type="hidden" value="Texto que se envia, pero no se muestra." />
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

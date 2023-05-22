@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+    <style>
+        main {
+            margin: 5px;
+        }
+
+        section {
+            background-color: rgb(230, 230, 230);
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+
+        dt::after {
+            content: ":"
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Listas</h1>
+        <section>
+            <h2>Lista desordenada</h2>
+            <!-- Lista desordenada -->
+            <ul>
+                <li>Argentina</li>
+                <li>Perú</li>
+                <li>México</li>
+            </ul>
+
+            <h4>Personalizar el bullet</h4>
+            <!-- El valor por defecto es DISC -->
+            <ul type="square">
+                <li>Argentina</li>
+                <li>Perú</li>
+                <li>México</li>
+            </ul>
+
+            <ul type="circle">
+                <li>Argentina</li>
+                <li>Perú</li>
+                <li>México</li>
+            </ul>
+
+
+            <h4>Personalizar el bullet con CSS</h4>
+            <!-- El valor por defecto es DISC -->
+            <ul style="list-style-type: disc">
+                <li>Argentina</li>
+                <li>Perú</li>
+                <li>México</li>
+            </ul>
+
+            <ul style="list-style-type: square">
+                <li>Argentina</li>
+                <li>Perú</li>
+                <li>México</li>
+            </ul>
+
+            <ul style="list-style-type: circle">
+                <li>Argentina</li>
+                <li>Perú</li>
+                <li>México</li>
+            </ul>
+
+        </section>
+
+        <section>
+            <h2>Lista ordenada</h2>
+            <!-- Lista ordenada -->
+
+            <h4>Personalizar la enumeración</h4>
+            <!-- El valor por defecto es 1 (por números) -->
+            <ol type="a">
+                <li>Argentina</li>
+                <li>Perú</li>
+                <li>México</li>
+            </ol>
+
+            <ol type="A">
+                <li>Argentina</li>
+                <li>Perú</li>
+                <li>México</li>
+            </ol>
+
+            <ol type="i">
+                <li>Argentina</li>
+                <li>Perú</li>
+                <li>México</li>
+            </ol>
+
+            <ol type="I">
+                <li>Argentina</li>
+                <li>Perú</li>
+                <li>México</li>
+            </ol>
+
+
+            <h4>Personalizar la enumeración con CSS</h4>
+            <!-- El valor por defecto es 1 (por números) -->
+            <ol style="list-style-type: decimal">
+                <li>Argentina</li>
+                <li>Perú</li>
+                <li>México</li>
+            </ol>
+
+            <ol style="list-style-type: decimal-leading-zero">
+                <li>Argentina</li>
+                <li>Perú</li>
+                <li>México</li>
+            </ol>
+
+            <ol style="list-style-type: lower-latin">
+                <li>Argentina</li>
+                <li>Perú</li>
+                <li>México</li>
+            </ol>
+
+            <ol style="list-style-type: upper-latin">
+                <li>Argentina</li>
+                <li>Perú</li>
+                <li>México</li>
+            </ol>
+
+            <ol style="list-style-type: lower-roman">
+                <li>Argentina</li>
+                <li>Perú</li>
+                <li>México</li>
+            </ol>
+
+            <ol style="list-style-type: upper-roman">
+                <li>Argentina</li>
+                <li>Perú</li>
+                <li>México</li>
+            </ol>
+
+            <ol style="list-style-type: lower-greek">
+                <li>Argentina</li>
+                <li>Perú</li>
+                <li>México</li>
+            </ol>
+
+            <h4>Personalizar el inicio de la enumeración</h4>
+            <ol start="3">
+                <li>Argentina</li>
+                <li>Perú</li>
+                <li>México</li>
+            </ol>
+
+            <h4>Listas invertidas</h4>
+            <ol reversed>
+                <li>Argentina</li>
+                <li>Perú</li>
+                <li>México</li>
+            </ol>
+
+        </section>
+
+        <section>
+            <h2>Anidamiento</h2>
+            <ul>
+                <li>Argentina</li>
+                <ol>
+                    <li>Buenos Aires</li>
+                    <li>Bariloche</li>
+                </ol>
+                <li>Perú</li>
+                <ul>
+                    <li>Lima</li>
+                </ul>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Listas de definiciones</h2>
+            <dl>
+                <dt>HTML</dt>
+                <dd>Lenguaje de marcado de hipertexto</dd>
+
+                <dt>CSS</dt>
+                <dd>Lenguaje de hojas de estilos en cascada</dd>
+
+                <dt>Javascript</dt>
+                <dd>Lenguajde de programación bajo el estándard ECMAScript</dd>
+            </dl>
+
+            <br>
+            <dl>
+                <dt>HTML</dt>
+                <dd>
+                    <ol>
+                        <li>Lenguaje de marcado de hipertexto</li>
+                        <li>Estructura el contenido</li>
+                        <li>Uno de los lenguajes de la web</li>
+                    </ol>
+                </dd>
+            </dl>
+
+        </section>
+    </main>
+</body>
+
+</html>

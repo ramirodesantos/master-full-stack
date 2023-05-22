@@ -1,0 +1,59 @@
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: rgb(189, 123, 2);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(114, 74, 0);
+}
+
+header div {
+  background-image: url(../img/cachorro.jpeg);
+  height: 200px;
+  background-position: 50% 20%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+h2 {
+  color: green;
+}
+
+p {
+  color: rgb(131, 131, 131);
+}
+
+#blue {
+  color: blue;
+}
+
+.blue {
+  color: blue;
+}
+
+.bold {
+  font-weight: 800;
+}
+
+.big {
+  font-size: 20px;
+}
+
+.elementos {
+  background-color: rgb(240, 240, 240);
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px;
+}

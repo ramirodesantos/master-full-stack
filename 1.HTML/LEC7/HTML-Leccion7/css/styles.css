@@ -1,0 +1,49 @@
+svg {
+  border: 1px solid gray;
+  background-color: rgb(225, 235, 225);
+}
+
+rect {
+  fill: aqua;
+  stroke: red;
+  stroke-width: 6;
+}
+
+line {
+  stroke: blue;
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dasharray: 30 50;
+  stroke-dashoffset: 10;
+}
+
+circle {
+  fill: orange;
+  stroke: black;
+}
+
+ellipse {
+  opacity: 0.7;
+  fill: rgb(117, 76, 0);
+}
+
+g rect {
+  fill: brown;
+  stroke: none;
+}
+
+polygon:nth-child(2) {
+  fill: green;
+}
+
+polygon:nth-child(3) {
+  fill: rgb(0, 92, 0);
+}
+
+polygon:nth-child(4) {
+  fill: rgb(0, 61, 0);
+}
+
+text {
+  fill: red;
+}

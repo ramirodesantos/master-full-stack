@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.5/vivus.js"></script>
+</head>
+
+<body>
+    <!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+
+    <svg id="my-svg" width="208px" height="174px" viewBox="0 0 208 174" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="Mountain---CodePen" transform="translate(-46.000000, -14.000000)" stroke="#000000">
+                <g id="Mountain" transform="translate(49.000000, 14.500000)">
+                    <g id="Moon" transform="translate(18.155172, 0.000000)">
+                        <ellipse id="Oval-Copy-2" stroke-width="2.78888393" fill="#FFFFFF" cx="85.3366606"
+                            cy="85.1996149" rx="83.9422187" ry="83.8051729"></ellipse>
+                        <ellipse id="Oval-Copy" stroke-width="0.697499982" cx="85.1896552" cy="85.0528455"
+                            rx="77.8581466" ry="77.7325508"></ellipse>
+                    </g>
+                    <g id="Mountain-3" transform="translate(0.000000, 61.349593)">
+                        <polygon id="Line" stroke-width="2.78999993" fill="#FFFFFF" stroke-linecap="square"
+                            points="0 78.0813008 49.5775862 0 99.1551724 78.0813008"></polygon>
+                        <polyline id="Line-2" stroke-width="2.09249994"
+                            points="27.9310345 33.4634146 38.4051724 26.4918699 48.8793103 33.4634146 59.3534483 26.4918699 69.8275862 33.4634146">
+                        </polyline>
+                    </g>
+                    <g id="Mountain-2" transform="translate(103.344828, 66.926829)" stroke-linecap="square">
+                        <polygon id="Line" stroke-width="2.78999993" fill="#FFFFFF"
+                            points="0 78.0813008 49.5775862 0 99.1551724 78.0813008"></polygon>
+                        <polyline id="Line-2" stroke-width="2.09249994"
+                            transform="translate(49.577586, 25.794715) scale(1, -1) translate(-49.577586, -25.794715) "
+                            points="34.9137931 27.8861789 42.2456897 23.703252 49.5775862 27.8861789 56.9094828 23.703252 64.2413793 27.8861789">
+                        </polyline>
+                    </g>
+                    <g id="Mountain-1" transform="translate(11.172414, 55.772358)" stroke-linecap="square">
+                        <polygon id="Line" stroke-width="2.78999993" fill="#FFFFFF"
+                            points="0 115.391648 91.3641105 0 182.728221 115.391648"></polygon>
+                        <polyline id="Line-2" stroke-width="2.09249994"
+                            points="52.3706897 49.4979675 71.6893846 35.554878 91.0080795 49.4979675 110.326774 35.554878 129.645469 49.4979675">
+                        </polyline>
+                    </g>
+                    <g id="Highlight" transform="translate(6.982759, 65.532520)" stroke-linecap="square"
+                        stroke-width="0.697499982">
+                        <path d="M13.9655172,101.087398 L73.3189655,101.087398" id="Line-3"></path>
+                        <path d="M16.7586207,98.2987805 L34.2155172,98.2987805" id="Line-3-Copy-2"></path>
+                        <path d="M0,70.4126016 L17.4568966,70.4126016" id="Line-3-Copy-5"></path>
+                        <path d="M167.586207,74.5955285 L185.043103,74.5955285" id="Line-3-Copy-4"></path>
+                        <path d="M96.362069,0 L105.439655,11.851626" id="Line-3-Copy-3"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </svg>
+
+</body>
+<script>
+    new Vivus('my-svg', {
+        type: 'oneByOne',
+        duration: 200,
+        animTimingFunction: Vivus.EASE_OUT
+    }, myVivus => {
+        if (myVivus.getStatus() === 'end') {
+            myVivus.reset().play();
+        }
+    });
+</script>
+
+
+</html>

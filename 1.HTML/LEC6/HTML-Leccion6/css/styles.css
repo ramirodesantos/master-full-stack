@@ -1,0 +1,37 @@
+table {
+  /* Evitar CELLSPACING */
+  border-spacing: 5px;
+  /* No se aplica pq abamos tenemos border-collapse*/
+  border-collapse: collapse;
+  /* Evitar BORDER */
+  /* Evitar BORDERCOLOR */
+  border: 3px solid rgb(221, 221, 221);
+}
+
+td,
+th {
+  margin: 20px;
+  width: 150px;
+  /* Evitar CELLPADDING */
+  padding: 30px;
+  border: 1px solid gray;
+  /* Evitar ALIGN */
+  text-align: center;
+}
+
+th {
+  background-color: rgb(235, 235, 235);
+}
+
+td[colspan] {
+  text-align: right;
+  padding-right: 85px;
+}
+
+.bg-col {
+  background-color: aquamarine;
+}
+
+.bg-col2 {
+  background-color: azure;
+}

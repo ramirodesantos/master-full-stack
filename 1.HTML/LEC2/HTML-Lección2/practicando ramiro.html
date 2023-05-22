@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practicando</title>
+
+</head>
+<body>
+    <main>
+        <!-- texto con tooltip -->
+        <p title="un tooltip">este texto tiene tooltip</p>
+        <!-- texto editable en navegador -->
+        <p contenteditable="true">texto editable en nav </p>
+        <!--  Desplegable. se obtiene con "details". un summary que contiene una lista. desplegable. -->
+        <details>
+        <summary style="cursor: pointer;">simpsons</summary>
+        <ol>
+            <li>homer</li>
+            <li>bart</li>
+            <li>lisa</li>
+        </ol>
+        </details>  
+
+        <!-- link externo -->
+        <a href="https://www.youtube.com/">youtube</a>
+        <!-- link interno /#-->
+        <a href="/#contacto">contacto</a>
+        <!-- link local / . target="blank" para abrir el link en una pestaña nueva-->
+        <a href="/contacto" target="blank">contacto</a>
+        <!-- Link a archivo -->
+        <a href="img/gato.jpg" download="ungato">Gato</a>
+         <!-- No es exclusiva para imágenes, pero el uso más habitutal de 
+                FIGURE y FIGCAPTION es asociar un texto a una imagen -->
+                <figure>
+                    <img src="img/harrygato.jpeg" alt="Harry, el gato." height="250">
+                    <figcaption>Harry, el gato.</figcaption>
+                </figure>
+    
+                <!-- Para evitar cargar imágenes muy grandes en dispositivos móviles -->
+                <picture>
+                    <source srcset="img/Desktop-ModelY.jpeg" media="(min-width: 1000px)" width="100%">
+                    <img src="img/Mobile-ModelY.jpeg" alt="" width="100%">
+                </picture>
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVGs</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Consejo: viewBox (sus 2 últimos valores) >= viewPort -->
+    <svg width="500" height="800" viewBox="0 0 500 800"> <!-- el viewport son los valores de width y height. el viewbow es un zoom in or out-->
+        <!-- Cuadrado o rectángulo -->
+        <rect width="300" height="100" x="20" y="30" rx="10" ry="10" />
+
+        <!-- Línea -->
+        <line x1="20" x2="400" y1="150" y2="150" />
+
+        <!-- Círculo y elipse -->
+        <ellipse cx="70" cy="300" rx="50" ry="20" />
+        <circle cx="70" cy="250" r="50" />
+
+        <!-- Polígono -->
+        <g>
+            <rect width="20" height="50" x="290" y="300" />
+            <polygon points="300,260, 340,310 260,310" />
+            <polygon points="300,230, 340,280 260,280" />
+            <polygon points="300,200, 340,250 260,250" />
+        </g>
+
+        <!-- Texto -->
+        <text x="0" y="15">Me gusta SVG</text>
+
+        <path transform="translate(200, 400)"
+            d="M85.5 4.58514L104.177 58.5333L104.526 59.5426H105.594H165.757L117.168 92.6756L116.22 93.3217L116.595 94.4056L135.206 148.164L86.3451 114.846L85.5 114.27L84.6549 114.846L35.7938 148.164L54.4047 94.4056L54.7799 93.3217L53.8323 92.6756L5.24269 59.5426H65.406H66.4741L66.8235 58.5333L85.5 4.58514Z"
+            fill="#09B4BF" stroke="black" stroke-width="3" />
+    </svg>
+</body>
+
+</html>
