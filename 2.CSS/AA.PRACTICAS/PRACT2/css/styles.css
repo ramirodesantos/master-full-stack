@@ -1,0 +1,39 @@
+ 
+ 
+ main{
+     background-image: radial-gradient(ellipse, rgba(161, 182, 159, 0.555), rgba(240, 189, 78, 0.384), rgba(34, 22, 11, 0.308), transparent) ,url(../img/burguer2.png);
+     background-size: cover;
+     background-repeat: no-repeat;
+     height: 300px;
+      
+ }
+
+ hgroup{
+     text-align: center;
+     padding-top: 20px;
+     color: rgba(36, 35, 33, 0.938);
+     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      font-size: 18px;
+ }
+ 
+ a{
+    text-decoration: none;
+    color: rgb(199, 17, 17);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 18px;
+ }
+
+div{
+text-align: center;
+} 
+
+ button{
+    margin-top: 50px;
+    background-color: rgba(235, 219, 78, 0.863);
+    border-radius: 50px 50px;
+    border-color: rgba(6, 6, 211, 0.747);
+ }
+
+ section{
+     margin-top: 20px;
+ }

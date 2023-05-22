@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 5</title>
+    <link rel="stylesheet" href="css/stylescontacto.css">
+</head>
+<body>
+    <main class="contain">
+        <section>
+            <h1>Formulario de contacto</h1>
+            <p>Escríbenos y en breve nos pondremos en contacto contigo.</p>
+            <form action="" method="post">
+                <label for="nombre">Nombre<span>*</span></label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Escribe tu nombre">
+                <label for="email">Email<span>*</span></label>
+                <input type="email" id="email" name="email" required placeholder="Escribe tu Email">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Escribe tu teléfono">
+                <label for="sitio-web">Sitio web</label>
+                <input type="url" id="sitio-web" name="sitio-web" placeholder="Escribe la URL de tu web">
+                <label for="asunto">Asunto<span>*</span></label>
+                <input type="text" id="asunto" name="asunto" placeholder="Escribe un asunto" required>
+                <label for="mensaje">Mensaje<span>*</span></label>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="10" required placeholder="Deja aquí tu comentario..."></textarea>
+                <input type="submit" value="ENVIAR">
+                <p><span>*</span>los campos son obligatorios</p>
+            </form>
+        </section>
+
+    </main>
+    
+</body>
+</html>
