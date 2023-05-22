@@ -1,0 +1,20 @@
+table{
+    border: 1px solid rgb(83, 83, 82);
+    border-collapse: collapse;
+    border-spacing: 7px;
+    background-color: rgb(228, 228, 228);
+}
+
+/* si se abre en la web el border collapse funciona bien */
+
+th,td,tr{
+    width: auto;
+    margin: 20px;
+    border: 1px solid rgb(83, 83, 82);
+    text-align: center;
+    padding: 5px;
+}
+
+th{
+    text-align: left;
+}

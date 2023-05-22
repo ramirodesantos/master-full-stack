@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24/7 todo noticas: noticias online</title>
+</head>
+<style>
+    header{
+        text-align: center;
+        background-color: rgb(158, 181, 189);
+        background-image: url(IMG/header-background.jpeg); 
+        background-position: center;
+        padding: 30px;
+    }
+    /**quiero alinear la imagen al a izq**/
+    .header {
+        display: flex
+    }
+
+    nav ul {
+      display: flex;  
+      width: 100%
+    }
+
+    main{
+        width: 100%;
+        display: flex
+       
+    }
+
+    nav ul li{
+        padding: 10px;
+        list-style-type: none;
+        width: 25%;
+        background-color: rgba(243, 243, 52, 0.842);
+            }
+
+    aside{
+        width: 20%;
+        background-color: rgb(139, 175, 119);
+        background-image: url(IMG/banner.jpeg);
+        background-position: center;
+        height: 900px;
+        margin: 10px;
+        }
+
+    h2{
+        font-style: italic;
+    }
+
+    li{
+        margin-top: 40px;
+    }
+
+    .espacio{
+        margin-top: 60px;
+    }
+
+    footer{
+        margin-bottom: 50px;
+    }
+    
+    .final{
+        text-align: center;
+        padding: 5px;
+        background-color: bisque;
+
+    }
+
+
+</style>
+
+<body>
+    <header>
+        <h1>24/7 Todo Noticias</h1>
+        <img class="header" src="../PRACTICA 3/IMG/logov2.svg" alt="logotipo" height="100" >
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/#noticias">Noticias</a></li>
+            <li><a href="/#articulo">articulos de opinion</a></li>
+            <li><a href="/#nosotros">sobre nosotros</a></li>
+            <li><a href="/#contacto">contacto</a></li>
+        </ul>
+    </nav>
+    <main>
+        <aside>
+        </aside>
+        <section>
+            <section style="background-color: rgb(218, 218, 247);">
+        <h2>
+            <a name="noticias">Noticias</a>
+        </h2>
+        <h3>
+         ipsum dolor sit amet consectetur adipisicing elit. Aliquid iure repudiandae corporis voluptatum earum ratione nesciunt maiores consequatur molestiae, fugiat, nihil explicabo adipisci velit nulla obcaecati! Nobis architecto blanditiis quis?
+        </h3>
+
+        <ul>
+            <li><h4>RATA VOLADORA EN NUEVA YORK</h4></li>
+            <img src="../PRACTICA 3/IMG/rata.jpg" alt="rata volaroda" height="200">
+            <article>
+                <strong>El poder de las ratas</strong>
+                <br>
+                Buenas tardes, las ratas están mutando y no sabemos por qué ni cómo.            
+            </article>
+            <footer>
+                <p><i>Autor: Peter Parker</i></p>
+            </footer>
+            <li><h4>GATO GITANTE EN BIELORRUSIA</h4></li>
+            <img src="../PRACTICA 3/IMG/gato.jpg" alt="gato gigante" height="300">
+            <article>
+                <h5>El frio hace crecer a los felinos</h5>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, error. Nulla nisi excepturi veniam nam fuga itaque adipisci. Ut repellat quo velit molestiae neque sequi nobis facilis. Nulla, quasi iusto?            
+            </article>
+            <footer>
+                <p><i>Autor: Peter Parker</i></p>
+            </footer>
+            <li><h4>EEUU Y RUSIA NEGOCIAN POR LA PAZ</h4></li>
+            <img src="../PRACTICA 3/IMG/putin.jpg" alt="gato gigante" height="200">
+            <article>
+                <h5>Si es que no, es que no, pero, ¿y si  sí?</h5>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, error. Nulla nisi excepturi veniam nam fuga itaque adipisci. Ut repellat quo velit molestiae neque sequi nobis facilis. Nulla, quasi iusto?            
+            </article>
+            <footer>
+                <p><i>Autor: Vladimir Lenin</i></p>
+            </footer>
+            </ul>
+        </section> 
+        <section style="background-color: rgb(160, 88, 88);">
+            <h2 class="espacio">
+                <a name="articulo">Articulos de Opinión</a>
+            </h2>
+            <h3>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore labore aspernatur deserunt! Dolorum, quae at iste eligendi reiciendis voluptatem ad tenetur fuga architecto pariatur, porro iusto aliquid aspernatur quia repellat.
+            </h3>
+            <article>          
+             <p>
+                ipsum dolor sit amet, consectetur adipisicing elit. Tempore labore aspernatur deserunt! Dolorum, quae at iste eligendi reiciendis voluptatem ad tenetur fuga architecto pariatur, porro iusto aliquid aspernatur quia repellat.  
+             </p>
+             <footer>
+                <p>Rafael Fernandez</p>
+             </footer>
+            </article>
+            <article>          
+                <p>
+                   ipsum dolor sit amet, consectetur adipisicing elit. Tempore labore aspernatur deserunt! Dolorum, quae at iste eligendi reiciendis voluptatem ad tenetur fuga architecto pariatur, porro iusto aliquid aspernatur quia repellat.  
+                </p>
+                <footer>
+                   <p>Jesus Reina</p>
+                </footer>
+               </article>
+               <article>          
+                <p>
+                   ipsum dolor sit amet, consectetur adipisicing elit. Tempore labore aspernatur deserunt! Dolorum, quae at iste eligendi reiciendis voluptatem ad tenetur fuga architecto pariatur, porro iusto aliquid aspernatur quia repellat.  
+                </p>
+                <footer>
+                   <p>Arturo Caravaca</p>
+                </footer>
+               </article>
+        </section> 
+        <section style="background-color: rgb(203, 212, 200);">
+            <h2 class="espacio">
+                <a name="nosotros">Sobre Nosotros</a>
+            </h2>
+            <h3>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore labore aspernatur deserunt! Dolorum, quae at iste eligendi reiciendis voluptatem ad tenetur fuga architecto pariatur, porro iusto aliquid aspernatur quia repellat.
+            </h3>
+    </section>
+    <section style="background-color: rgb(221, 211, 64);">
+        <h2 class="espacio">
+            <a name="contacto">Contacto</a>
+        </h2>
+        <h3>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore labore aspernatur deserunt! Dolorum, quae at iste eligendi reiciendis voluptatem ad tenetur fuga architecto pariatur, porro iusto aliquid aspernatur quia repellat.
+        </h3>
+        <a href="mailto:noticias24@noticias.com">Email de contacto</a>
+</section>
+</section>
+   </main>
+   <footer class="final">
+    <address>
+        <p><b>&#169 Grupo EMEA NOTICIAS</b></p>
+        <p>Calle del Perro, 2, Alicante</p>
+    </address>
+</footer>
+</body>
+</html>
