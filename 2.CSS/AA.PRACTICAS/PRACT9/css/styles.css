@@ -1,0 +1,13 @@
+.contenedor{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.caja{
+    width: 200px;
+    height: 200px;
+    background-color: grey;
+}

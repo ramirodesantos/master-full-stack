@@ -1,0 +1,156 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+.contenedor {
+    max-width: 800px;
+    margin: auto;
+    min-height: 100vh;
+}
+
+
+nav{
+    display: flex;
+    background-color: black;
+    justify-content: space-between;
+}
+
+a {
+text-decoration: none;
+color: white;
+}
+
+nav a{
+    color: rgb(212, 222, 233);
+    margin:5px;
+   
+}
+
+nav p{
+    color: rgb(212, 222, 233);
+    margin: 5px 15px;
+}
+
+
+.albumexample{
+    max-width: 400px; 
+    margin: auto;
+    text-align: center;
+    /* padding-top: 60px;
+    padding-bottom: 60px; */
+    padding: 60px 0px;
+}
+
+.albumexample p{
+    margin: 10px 0px 20px;
+    height: 54px;
+    /* overflow: scroll; */
+}
+
+.botones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton1{
+    background-color: rgb(55, 87, 230);
+    border-radius: 3px 3px;
+    margin-right: 3px;
+    padding: 5px 8px;
+    cursor: pointer;
+}
+
+.boton1:hover{
+    background-color: rgb(127, 180, 249);
+    transform: scale(1.2);
+    border: 2px solid rgb(20, 35, 79);;
+}
+
+.boton1 a:hover{
+    color: rgb(249, 241, 230);
+}
+
+.boton2{
+    background-color: grey;
+    border-radius: 3px 3px;
+    padding: 5px 8px;
+}
+
+.card{
+    background-color: rgb(239, 243, 243);
+    width: 320px;  
+    padding: 30px 5px 10px 15px;
+    /* margin-top: 150px; */
+    max-width: fit-content;
+}
+
+.thumbnail {
+    border: 2px solid rgb(230, 233, 230);
+    background-color: rgb(255, 255, 255);
+    width: auto;
+    text-align: center;
+}
+
+.thumbnail div:nth-of-type(1){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(81, 76, 76);
+    color: rgb(215, 211, 211);
+    height: 150px;
+}
+
+.thumbnail  div:nth-of-type(2){
+    display: flex;
+    text-align: left;
+    margin: 10px;
+}
+
+.thumbnail div:nth-of-type(3){
+    display: flex;
+    margin: 10px;
+    border-collapse: collapse;
+    justify-content: space-between;
+}
+
+.thumbnail div:nth-of-type(3) p{
+    font-size: 15px;
+}
+
+.thumbnail div:nth-of-type(3) button{
+    background-color: white;
+    border: 1px solid black;
+    padding: 3px;
+}
+
+.thumbnail div:nth-of-type(3) button a{
+    background-color: white;
+    text-align: center;
+    color: rgb(5, 5, 5);
+}
+
+/* utilizamos el identificador porque por especificidad los hijos son más especificos que las clases. pero todos son menos espeficifos que el id. con estilos en linea tmb funciona  */
+#botones1{
+    height: auto;
+    background-color: white;
+    border-collapse: collapse;
+}
+
+#botones1 button:nth-of-type(1){
+    border-radius: 5px 0px 0px 5px;
+}
+
+#botones1 button:nth-of-type(2){
+    border-radius: 0px 5px 5px 0px;
+}
+
+/* GRID */
+
+.grid{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 1px 0px;
+}
