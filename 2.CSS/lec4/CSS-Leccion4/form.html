@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/range-styled.css">
+</head>
+
+<body>
+    <main class="form-bg">
+        <div class="container-form">
+            <h1>Form</h1>
+            <form action="">
+                <input type="text" name="name" id="name">
+                <textarea name="area" id="area" cols="30" rows="10"></textarea>
+
+                <div class="range-container">
+                    <input type="range" value="0" min="0" max="100"
+                        oninput="this.nextElementSibling.value = this.value">
+                    <output>0</output>
+                </div>
+
+                <select name="lang" id="lang">
+                    <option value="" disabled selected hidden>Selecciona un lenguaje</option>
+                    <option value="html">HTML</option>
+                    <option value="html">CSS</option>
+                    <option value="html">JS</option>
+                </select>
+
+                <h2 class="title-radio">Número de hijos:</h2>
+                <label class="container-radio">Uno
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container-radio">Dos
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container-radio">Tres
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container-radio">Cuatro
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+                <div class="politica-privacidad">
+                    <h2>Política de privacidad</h2>
+                    <br>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid distinctio perspiciatis aut
+                        sint laborum dicta dolor, alias aliquam quo doloremque fugiat. Id asperiores expedita, fugit
+                        vitae praesentium amet a, iure, molestiae excepturi porro fuga doloribus. Iste omnis rerum
+                        delectus eum eos mollitia rem, cupiditate, sed esse atque quis qui similique.</p>
+                    <br>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid distinctio perspiciatis aut
+                        sint laborum dicta dolor, alias aliquam quo doloremque fugiat. Id asperiores expedita, fugit
+                        vitae praesentium amet a, iure, molestiae excepturi porro fuga doloribus. Iste omnis rerum
+                        delectus eum eos mollitia rem, cupiditate, sed esse atque quis qui similique.</p>
+                    <br>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid distinctio perspiciatis aut
+                        sint laborum dicta dolor, alias aliquam quo doloremque fugiat. Id asperiores expedita, fugit
+                        vitae praesentium amet a, iure, molestiae excepturi porro fuga doloribus. Iste omnis rerum
+                        delectus eum eos mollitia rem, cupiditate, sed esse atque quis qui similique.</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid distinctio perspiciatis aut
+                        sint laborum dicta dolor, alias aliquam quo doloremque fugiat. Id asperiores expedita, fugit
+                        vitae praesentium amet a, iure, molestiae excepturi porro fuga doloribus. Iste omnis rerum
+                        delectus eum eos mollitia rem, cupiditate, sed esse atque quis qui similique.</p>
+                    <br>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid distinctio perspiciatis aut
+                        sint laborum dicta dolor, alias aliquam quo doloremque fugiat. Id asperiores expedita, fugit
+                        vitae praesentium amet a, iure, molestiae excepturi porro fuga doloribus. Iste omnis rerum
+                        delectus eum eos mollitia rem, cupiditate, sed esse atque quis qui similique.</p>
+                    <br>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid distinctio perspiciatis aut
+                        sint laborum dicta dolor, alias aliquam quo doloremque fugiat. Id asperiores expedita, fugit
+                        vitae praesentium amet a, iure, molestiae excepturi porro fuga doloribus. Iste omnis rerum
+                        delectus eum eos mollitia rem, cupiditate, sed esse atque quis qui similique.</p>
+                </div>
+                <label class="container-checkbox">Estoy de acuerdo con la política de privacidad.
+                    <input type="checkbox">
+                    <span class="custom-cb"></span>
+                </label>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </main>
+
+
+
+</body>
+
+</html>

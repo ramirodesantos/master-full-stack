@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+main {
+  padding: 15px;
+}
+
+
+
+.static {
+  position: static;
+}
+
+.relative {
+  position: relative;
+  top: 30px;
+  left: 50px;
+}
+
+.fixed {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+}
+
+.absolute {
+  position: absolute;
+  color: red;
+  top: 0;
+}
+
+.container {
+  position: relative;
+}
+
+.container > :nth-child(1) {
+  color: blue;
+}
+
+.zindex-primero {
+  color: green;
+  background: black;
+  position: absolute;
+  top: 0;
+}
+
+.zindex-segundo {
+  color: yellow;
+  background: gray;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+
+.sticky {
+  position: sticky;
+  top: 100px;
+}

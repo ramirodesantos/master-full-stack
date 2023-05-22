@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: normal;
+  src: url(../fonts/quicksand/Quicksand-Regular.otf);
+}
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: bold;
+  src: url(../fonts/quicksand/Quicksand-Bold.otf);
+}
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: italic;
+  font-weight: bold;
+  src: url(../fonts/quicksand/Quicksand-BoldItalic.otf);
+}
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 100;
+  src: url(../fonts/quicksand/Quicksand-Light.otf);
+}
+
+body {
+  font-family: "Quicksand";
+  font-weight: 400;
+}
+
+.google {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+.font :nth-child(2) {
+  text-decoration: underline;
+}
+
+.font :nth-child(3) {
+  text-transform: uppercase;
+}
+
+.font :nth-child(4) {
+  text-indent: 30px;
+}
+
+.font :nth-child(5) {
+  letter-spacing: 30px;
+}
+
+.font :nth-child(6) {
+  line-height: 60px;
+}
+
+.font :nth-child(7) {
+  font-variant: small-caps;
+}
+
+.font :nth-child(8) {
+  font-size: 2rem;
+}

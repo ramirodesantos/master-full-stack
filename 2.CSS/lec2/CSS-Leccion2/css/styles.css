@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background-color: gray;
+  /* A hacer al final de la clase */
+  /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #000),
+    color-stop(100%, #fff)
+  );
+
+  /* Safari 5.1, Chrome 10+ */
+  background: -webkit-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0) 100%
+    ),
+    url(../img/faces.jpeg);
+
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0) 100%
+    ),
+    url(../img/faces.jpeg);
+
+  /* IE 6 - 9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(0, 0, 0, 0.3)', endColorstr='rgba(0, 0, 0)',GradientType=0 );
+
+  /* IE 10+ */
+  background: -ms-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0) 100%
+    ),
+    url(../img/faces.jpeg);
+
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0) 100%),
+    url(../img/faces.jpeg);
+
+  background: linear-gradient(to top, black, rgba(0, 0, 0, 0.2)),
+    url(../img/faces.jpeg);
+  background-attachment: fixed;
+}
+
+main {
+  background-color: #fff;
+  width: 620px;
+  /* Para centrar un div en su elemento padre: */
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  padding: 20px 0px;
+  color: rgba(160, 3, 3, 0.692);
+  background-color: rgb(214, 214, 214);
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  color: #fff;
+}
+
+section:nth-child(2) {
+  background-color: #6b0000;
+  background-image: url(../img/targaryen.png), url(../img/stark.png);
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: 0px 20px, 360px 30px;
+}
+
+section:nth-child(2) h2 {
+  opacity: 0.8;
+}
+
+section:nth-child(3) {
+  background-image: radial-gradient(circle, #000, transparent),
+    url(../img/drogon.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+section:nth-child(4) {
+  /* COLOR,
+    IMAGE,
+    REPEAT,
+    POSITION / SIZE */
+  background: rgb(13, 13, 231) url(../img/night-king.jpeg) no-repeat bottom /
+    contain;
+  background-blend-mode: multiply;
+}

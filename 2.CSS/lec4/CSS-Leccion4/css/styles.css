@@ -1,0 +1,281 @@
+:root {
+  --main: #0a708a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: var(--main);
+}
+
+/* Index */
+.fullsize {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgb(233, 233, 233, 0.8), rgb(233, 233, 233, 0.8)),
+    url(../img/mistymountains.jpeg) no-repeat center / cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mountain {
+  width: 900px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../img/mountain.png) no-repeat center / contain;
+  color: white;
+  font-size: 80px;
+  text-shadow: 5px 5px 20px #000;
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+  font-size: 25px;
+  width: 400px;
+  margin: auto;
+}
+
+.links a {
+  color: rgb(204, 218, 16);
+  text-decoration: none;
+  text-shadow: 5px 5px 5px #000;
+  cursor: crosshair;
+}
+
+.links a:hover {
+  color: rgb(255, 238, 0);
+  transform: scale(1.2);
+  transition: transform ease-in-out 1s;
+}
+
+.links a:active {
+  color: rgb(102, 255, 0);
+}
+
+/* Form */
+.form-bg {
+  width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(rgb(233, 233, 233, 0.8), rgb(233, 233, 233, 0.8)),
+    url(../img/mistymountains.jpeg) no-repeat center / cover;
+  padding: 50px 0px;
+}
+
+.container-form {
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  padding: 50px;
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+
+.container-form h1 {
+  font-family: sans-serif;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+input[type="text"],
+textarea,
+select {
+  border-radius: 50px;
+  border: none;
+  box-shadow: 0px 0px 8px rgb(139, 139, 139);
+  padding: 15px;
+  caret-color: var(--main);
+  font-size: 18px;
+  width: 100%;
+  outline: none;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 98%;
+  background-position-y: 15px;
+  margin-right: 2rem;
+  padding: 1rem;
+  padding-right: 2rem;
+  cursor: pointer;
+}
+
+input[type="text"] {
+  color: var(--main);
+  margin-bottom: 30px;
+}
+
+textarea {
+  resize: vertical;
+  margin-bottom: 30px;
+  border-radius: 20px;
+}
+
+input:focus:not([type="range"]),
+textarea:focus {
+  border: 1px solid blue;
+}
+
+/* RADIO BUTTONS */
+.container-radio {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+
+  /* Resetea los estilos predefinidos al estar seleccionado */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.title-radio {
+  font-size: 18px;
+  margin: 50px 0 20px;
+}
+
+/* Ocultamos los radio button por defecto del navegador */
+.container-radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Creamos radio buttons personalizados */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* En mouse-over, resaltamos el fondo */
+.container-radio:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* Cuando el radio button está seleccionado, lo resaltamos en el main color */
+.container-radio input:checked ~ .checkmark {
+  background-color: var(--main);
+}
+/* FIN RADIO BUTTONS */
+
+.politica-privacidad {
+  height: 200px;
+  overflow: auto;
+  border: 1px solid #0a708a81;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+/* CHECKBOX */
+/* Personalizamos la label (container) */
+.container-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+
+  /* Resetea los estilos predefinidos al estar seleccionado */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container-checkbox {
+  margin: 35px;
+}
+
+/* Ocultar el checkbox predefinido del navegador */
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Crear un checkbox personalizado */
+.custom-cb {
+  position: absolute;
+  top: -4px;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* En mouse-over, resalta el fondo */
+.container-checkbox:hover input ~ .custom-cb {
+  background-color: rgb(230, 230, 230);
+}
+
+/* Cuando está checked, cambia el color de fondo */
+.container-checkbox input:checked ~ .custom-cb {
+  background-color: var(--main);
+}
+
+/* Crea el icono check (oculto cuando no está seleccionado) */
+.custom-cb:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Muestra el icono check cuando está checked */
+.container-checkbox input:checked ~ .custom-cb:after {
+  display: block;
+}
+
+/* Da estilos al icono check */
+.container-checkbox .custom-cb:after {
+  left: 8px;
+  top: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+input[type="submit"] {
+  border-radius: 50px;
+  border: none;
+  box-shadow: 0px 0px 8px rgb(139, 139, 139);
+  padding: 15px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  background: var(--main);
+  color: #fff;
+  width: 100%;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background: #067995;
+}
