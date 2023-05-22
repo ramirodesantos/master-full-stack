@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+main {
+  background-color: #b31ba6;
+  max-width: 700px;
+  min-height: 100vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  text-align: center; }
+  main section {
+    max-width: 450px;
+    height: auto;
+    background-color: white;
+    margin: 20px;
+    border-radius: 5px 5px;
+    padding: 10px 30px; }
+    main section h1 {
+      color: #b31ba6;
+      margin-bottom: 15px; }
+  main input, main label, main textarea {
+    display: block;
+    text-align: left; }
+  main label, main input[type=submit], main form p {
+    margin-top: 20px; }
+  main input {
+    width: 100%;
+    height: 25px;
+    border-radius: 5px 5px;
+    border: 1px solid #b31ba6;
+    margin-top: 5px;
+    color: rgba(0, 0, 0, 0.222); }
+    main input:focus {
+      outline-color: #b31ba6; }
+
+::placeholder {
+  color: rgba(24, 24, 24, 0.222); }
+
+input[type=submit] {
+  background-color: #b31ba6;
+  color: aliceblue;
+  text-align: center;
+  cursor: pointer; }
+
+textarea {
+  width: 100%;
+  border-radius: 5px 5px;
+  border: 1px solid #b31ba6;
+  margin-top: 5px;
+  color: rgba(0, 0, 0, 0.222); }
+  textarea:focus {
+    outline-color: #b31ba6; }
+
+form p {
+  text-align: left; }
+
+span {
+  color: #b31ba6; }
+
+/*# sourceMappingURL=stylescontacto.css.map */

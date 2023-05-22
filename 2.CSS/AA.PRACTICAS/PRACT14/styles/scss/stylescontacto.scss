@@ -1,0 +1,77 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+@import "_variables";
+
+main{
+    background-color: $contacto-bg-color;
+    max-width: 700px;
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    section{
+        max-width: 450px;
+        height: auto;
+        background-color: white;
+        margin: 20px;
+        border-radius: 5px 5px;
+        padding: 10px 30px;
+        h1{
+            color: $contacto-bg-color;
+            margin-bottom: 15px;
+        }
+    }
+    input, label, textarea{
+        display: block;
+        text-align: left;
+    }
+    label, input[type=submit], form p{
+        margin-top: 20px;
+    }
+    input{
+        width: 100%;
+        height: 25px;
+        border-radius: 5px 5px;
+        border: 1px solid $contacto-bg-color;
+        margin-top: 5px;
+        color: rgba(0, 0, 0, 0.222);
+        &:focus{
+            outline-color: $contacto-bg-color;
+        }
+    }
+}
+
+::placeholder{
+    color: rgba(24, 24, 24, 0.222);
+}
+
+input[type=submit]{
+    background-color: $contacto-bg-color;
+    color: aliceblue;
+    text-align: center;
+    cursor:pointer;
+}
+
+textarea{
+    width: 100%;
+    border-radius: 5px 5px;
+    border: 1px solid $contacto-bg-color;
+    margin-top: 5px;
+    color: rgba(0, 0, 0, 0.222);
+    &:focus{
+        outline-color: $contacto-bg-color;
+    }
+}
+
+form p{
+    text-align: left;
+}
+
+span{
+    color: $contacto-bg-color;
+}

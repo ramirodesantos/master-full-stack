@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none;
+  color: white; }
+
+.contenedor {
+  max-width: 700px;
+  margin: auto;
+  min-height: 100vh;
+  background-color: #faf7f7; }
+  .contenedor nav {
+    display: flex;
+    background-color: #070707;
+    justify-content: space-between; }
+    .contenedor nav a {
+      color: #d4dee9;
+      margin: 5px; }
+    .contenedor nav p {
+      color: #d4dee9;
+      margin: 5px 15px; }
+
+.albumexample {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 60px; }
+  .albumexample p {
+    margin: 10px 0px 20px;
+    min-height: 54px; }
+  .albumexample .botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 20px; }
+    .albumexample .botones .boton1 {
+      background-color: #3757e6;
+      margin-right: 3px;
+      border-radius: 3px 3px;
+      padding: 5px 8px;
+      cursor: pointer; }
+      .albumexample .botones .boton1:hover {
+        background-color: #7fb4f9;
+        transform: scale(1.2);
+        border: 2px solid #14234f; }
+      .albumexample .botones .boton1 a:hover {
+        color: #dbeded; }
+    .albumexample .botones .boton2 {
+      background-color: grey;
+      border-radius: 3px 3px;
+      padding: 5px 8px;
+      cursor: pointer; }
+
+.card {
+  display: flex;
+  background-color: #eff3f3;
+  width: 300px;
+  padding: 30px 5px 10px 15px;
+  margin-top: 150px; }
+  .card .thumbnail {
+    border: 2px solid #e6e9e6;
+    background-color: #faf7f7;
+    text-align: center; }
+    .card .thumbnail div:nth-of-type(1) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: grey;
+      color: #d7d3d3;
+      height: 150px; }
+    .card .thumbnail div:nth-of-type(2) {
+      display: flex;
+      text-align: left;
+      margin: 10px; }
+    .card .thumbnail div:nth-of-type(3) {
+      display: flex;
+      margin: 10px;
+      border-collapse: collapse;
+      justify-content: space-between; }
+      .card .thumbnail div:nth-of-type(3) p {
+        font-size: 15px; }
+      .card .thumbnail div:nth-of-type(3) button {
+        background-color: white;
+        border: 1px solid black;
+        padding: 3px; }
+        .card .thumbnail div:nth-of-type(3) button a {
+          text-align: center;
+          color: #050505; }
+
+#botones1 {
+  height: auto;
+  background-color: white;
+  border-collapse: collapse; }
+  #botones1 button:nth-of-type(1) {
+    border-radius: 5px 0px 0px 5px; }
+  #botones1 button:nth-of-type(2) {
+    border-radius: 0px 5px 5px 0px; }
+
+.card-container {
+  display: flex; }
+
+/*# sourceMappingURL=styles.css.map */
