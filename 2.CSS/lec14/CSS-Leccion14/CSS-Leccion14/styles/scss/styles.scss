@@ -1,0 +1,105 @@
+// @use con dart sass
+@import "variables";
+@import "mixins";
+@import "functions";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $bg-color;
+  font-family: $font;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+header {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    color: $light;
+    text-shadow: 0 0 10px $dark;
+  }
+}
+
+main {
+  padding: 0 20px 20px;
+  min-height: calc(100vh - 180px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-auto-rows: 70px;
+  gap: 30px;
+}
+
+.card {
+  color: $bg-color;
+  border-radius: 5px;
+  padding: 25px;
+  text-align: center;
+  position: relative;
+  background-color: $dark;
+
+  &--common {
+    @include create-card();
+  }
+
+  &--related {
+    @include create-card($category: "related");
+  }
+
+  &--highlight {
+    @include create-card($highlight: "yes");
+  }
+
+  &--decoration {
+    @include create-card($decoration: "yes");
+  }
+}
+
+.buttons {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+%button {
+  border-radius: 5px;
+  padding: 15px;
+  text-decoration: none;
+  color: $dark;
+}
+
+.sass {
+  @extend %button;
+  background: $light;
+}
+
+.eip {
+  @extend %button;
+  background: $white;
+}
+
+footer {
+  @extend .card;
+  background-color: $dark;
+  color: $light;
+  width: 280px;
+  margin: auto;
+  font-size: calculate-rem(12);
+
+  span {
+    color: $orange;
+  }
+}

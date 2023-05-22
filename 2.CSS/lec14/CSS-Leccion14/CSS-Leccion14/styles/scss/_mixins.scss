@@ -1,0 +1,31 @@
+// @use con dart sass
+@import "variables";
+
+@mixin create-card($category: "common", $highlight: "no", $decoration: "no") {
+  @if $category == "common" {
+    background-color: $orange;
+  }
+
+  @if $category == "related" {
+    background-color: $orange-light;
+  }
+
+  @if $highlight == "yes" {
+    box-shadow: 0 0 10px $dark;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+
+  @if $decoration == "yes" {
+    &::after {
+      content: "";
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: $fluor;
+      border-radius: 10px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

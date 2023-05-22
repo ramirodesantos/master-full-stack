@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  padding: 20px;
+}
+
+.card {
+  background-color: rgb(255, 66, 66);
+  height: 50px;
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="hero-img">
+            CSS GRID
+        </div>
+    </header>
+    <main>
+        <h2>Basic Grid</h2>
+        <div class="basic-grid">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        <h2>Repeat, 1fr, order</h2>
+        <div class="repeat">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div id="pika2" class="item pika2"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        <h2>Start / end / span / grid-area</h2>
+        <div class="startend">
+            <div id="bulb" class="item bulb start"></div>
+            <div class="item"></div>
+            <div id="char" class="char item"></div>
+            <div class="item"></div>
+            <div id="pika" class="item"></div>
+            <div class="item"></div>
+        </div>
+        <h2>Areas</h2>
+        <div class="areas">
+            <div id="bulbarea" class="item bulb start"></div>
+            <div class="item"></div>
+            <div id="chararea" class="char item"></div>
+            <div class="item"></div>
+            <div id="pikaarea" class="item"></div>
+            <div class="item"></div>
+        </div>
+        <h2>Min-content, max-content</h2>
+        <div class="content">
+            <div class="item">
+                Este es pikachu, un pokemon!
+            </div>
+            <div class="item"></div>
+            <div class="item">
+                Este es pikachu, un pokemon!
+            </div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        <h2>Minmax</h2>
+        <div class="minmax">
+            <div class="item ellipsis">
+                Este es pikachu, un pokemon!
+            </div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        <h2>Autofit / autorows</h2>
+        <div class="autofit">
+            <div class="item flareon"></div>
+            <div class="item flareon"></div>
+            <div class="item flareon"></div>
+            <div class="item flareon"></div>
+        </div>
+        <h2>Autofill / autorows</h2>
+        <div class="autofill">
+            <div class="item flareon"></div>
+            <div class="item flareon"></div>
+            <div class="item flareon"></div>
+            <div class="item flareon"></div>
+        </div>
+        <h2>Autoflow column / autocolumns</h2>
+        <div class="autoflow-column">
+            <div class="item eevee"></div>
+            <div class="item eevee"></div>
+            <div class="item eevee"></div>
+            <div class="item eevee"></div>
+            <div class="item eevee"></div>
+            <div class="item eevee"></div>
+            <div class="item eevee"></div>
+        </div>
+        <h2>Autoflow dense</h2>
+        <div class="dense">
+            <div class="item arcanine"></div>
+            <div class="item arcanine"></div>
+            <div class="item arcanine"></div>
+            <div class="item arcanine"></div>
+            <div class="item arcanine"></div>
+            <div class="item arcanine"></div>
+        </div>
+        <h2>Justify / align / place <i><u>items</u></i></h2>
+        <div class="position-items justify-items align-items place-items">
+            <div class="item psyduck small"></div>
+            <div class="item psyduck small"></div>
+            <div class="item psyduck small"></div>
+            <div class="item psyduck small"></div>
+        </div>
+        <h2>Justify / align / place <i><u>self</u></i></h2>
+        <div class="position-items">
+            <div class="item psyduck small"></div>
+            <div class="item psyduck small"></div>
+            <div class="item psyduck small"></div>
+            <div class="item psyduck small justify-self align-self place-self"></div>
+        </div>
+        <h2>Justify / align / place <i><u>content</u></i></h2>
+        <div class="position-content justify-content align-content place-content">
+            <div class="item cubone"></div>
+            <div class="item cubone"></div>
+            <div class="item cubone"></div>
+            <div class="item cubone"></div>
+        </div>
+    </main>
+</body>
+
+</html>

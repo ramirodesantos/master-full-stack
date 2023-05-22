@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Signika:wght@300&display=swap");
+
+:root {
+  --purple: #892a92;
+  --purple2: #70217a;
+  --pink: #f6d3fd;
+  --baseColor: #c2e59c;
+  --baseColor2: #64b3f4;
+  --signika: "Signika", sans-serif;
+  --tech: "Share Tech Mono", monospace;
+}
+
+@keyframes card {
+  0% {
+    transform: skew(0deg) scale(0.1) rotate3d(1, 1, 1, 360deg);
+    top: 50vh;
+  }
+  20% {
+    top: 20vh;
+  }
+  100% {
+    transform: skew(5deg, -2deg) scale(1);
+    top: 50vh;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, var(--baseColor2), var(--baseColor));
+  font-family: var(--tech);
+  color: var(--pink);
+}
+
+.cont-card {
+  width: 350px;
+  height: 222px;
+  position: relative;
+  margin: auto;
+  /* transform: translateY(-111px); */
+  margin-top: -111px;
+  perspective: 600px;
+  /* animation-name: card;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-iteration-count: 3;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation-fill-mode: backwards; */
+  animation: card 3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards 1;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--purple), var(--purple2));
+  border-radius: 10px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+  filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.6));
+  margin: auto;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  width: 130px;
+  height: auto;
+  margin: 0;
+  position: absolute;
+  right: 50%;
+  transform: translate(65px);
+  margin-top: 15px;
+}
+
+.logo-cont::after {
+  content: "PLATINUM";
+  font-family: var(--signika);
+  font-size: 0.45rem;
+  letter-spacing: 4px;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 80px;
+}
+
+.chip {
+  width: 50px;
+  height: auto;
+  position: absolute;
+  top: 55px;
+  left: 35px;
+}
+
+.card-number {
+  font-size: 1.4rem;
+  letter-spacing: 2.5px;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.3));
+  position: absolute;
+  top: 110px;
+  left: 38px;
+}
+
+.card-number::after {
+  content: "5032";
+  font-size: 0.5rem;
+  font-family: var(--signika);
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+}
+
+.mastercard {
+  width: 80px;
+  position: absolute;
+  top: 150px;
+  right: 25px;
+}
+
+.valid {
+  position: absolute;
+  top: 162px;
+  left: 170px;
+}
+
+.valid::before {
+  content: "Valid thru";
+  font-size: 0.5rem;
+  position: absolute;
+  top: -15px;
+}
+
+.name {
+  position: absolute;
+  top: 187px;
+  left: 40px;
+}
+
+.magnetic {
+  background: #000;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  top: 25px;
+}
+
+.stripes {
+  background: repeating-linear-gradient(
+    45deg,
+    #606dbc,
+    #606dbc 10px,
+    #465298 10px,
+    #465298 20px
+  );
+  width: 300px;
+  height: 40px;
+  position: absolute;
+  top: 80px;
+  border-radius: 0 5px 5px 0;
+}
+
+.csv {
+  position: absolute;
+  top: 85px;
+  right: 15px;
+  width: 45px;
+  height: 30px;
+  border-radius: 5px;
+  background: var(--pink);
+  color: var(--purple2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.mc-reverse {
+  width: 80px;
+  position: absolute;
+  top: 155px;
+  right: 10px;
+  filter: grayscale();
+  opacity: 0.5;
+}
+
+.part {
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -moz-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -ms-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -o-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+}
+
+.back {
+  transform: rotateY(-180deg);
+}
+
+.front {
+  transform: rotateY(0deg);
+}
+
+.cont-card:hover .back {
+  transform: rotateY(0deg);
+}
+
+.cont-card:hover .front {
+  transform: rotateY(-180deg);
+}

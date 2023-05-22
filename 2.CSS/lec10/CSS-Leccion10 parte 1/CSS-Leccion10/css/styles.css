@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: rgb(76, 106, 168);
+}
+
+h2:not(h2:first-of-type) {
+  margin-top: 20px;
+}
+
+header {
+  height: 150px;
+  background: radial-gradient(#000000, #91b8e5);
+}
+
+.hero-img {
+  width: 700px;
+  margin: auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-image: url(../img/grid.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 6rem;
+  font-weight: 700;
+}
+
+main {
+  padding: 20px;
+}
+
+.item {
+  border-radius: 5px;
+  background: linear-gradient(rgba(0, 0, 0, 0.486), rgba(112, 112, 24, 0.657)),
+    url(../img/pika.jpeg) no-repeat center / cover;
+  padding: 5px;
+  color: white;
+}
+
+.bulb {
+  background: linear-gradient(rgba(0, 0, 0, 0.486), rgba(24, 112, 58, 0.657)),
+    url(../img/bulbasaur.jpeg) no-repeat center / cover;
+}
+
+.char {
+  background: linear-gradient(rgba(0, 0, 0, 0.486), rgba(112, 24, 24, 0.657)),
+    url(../img/char.jpeg) no-repeat left / cover;
+}
+
+.pika2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.486), rgba(105, 56, 0, 0.657)),
+    url(../img/pika2.jpeg) no-repeat center / cover;
+}
+
+.flareon {
+  background: linear-gradient(rgba(0, 0, 0, 0.486), rgba(202, 108, 0, 0.657)),
+    url(../img/flareon.jpeg) no-repeat 50% 40% / 115%;
+}
+
+.eevee {
+  background: linear-gradient(rgba(0, 0, 0, 0.486), rgba(146, 12, 0, 0.445)),
+    url(../img/eevee.jpeg) no-repeat center / cover;
+}
+
+.arcanine {
+  background: linear-gradient(rgba(0, 0, 0, 0.486), rgba(136, 61, 0, 0.5)),
+    url(../img/arcanine.jpeg) no-repeat center / cover;
+}
+
+.psyduck {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 230, 0, 0.287)),
+    url(../img/psyduck.jpeg) no-repeat center / cover;
+}
+
+.cubone {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 230, 0, 0.287)),
+    url(../img/cubone.jpeg) no-repeat center / cover;
+}
+
+.basic-grid {
+  display: grid;
+  grid-template-columns: 100px 20% auto;
+  grid-template-rows: 100px 40px 20px;
+  /* row-gap: 20px;
+  column-gap: 10px; */
+  gap: 10px 20px;
+}
+
+.repeat {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 100px 40px 20px;
+  gap: 10px;
+}
+
+#pika2 {
+  order: -1;
+}
+
+.startend {
+  display: grid;
+  /* grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 80px); */
+  grid-template: repeat(3, 80px) / repeat(4, 1fr);
+  gap: 10px;
+}
+
+#bulb {
+  /* También números negativos */
+
+  /* grid-column-start: 2;
+  grid-column-end: 4; */
+  grid-column: 2 / 4;
+}
+
+#char {
+  /* grid-row-start: 1;
+  grid-row-end: 4; */
+  grid-row: 1 / 4;
+}
+
+#pika {
+  /* grid-column: 3 / span 2;
+  grid-row: 2 / span 2; */
+  grid-area: 2 / 3 / 4 / 5;
+}
+
+.areas {
+  display: grid;
+  /* grid-template: repeat(3, 80px) / repeat(4, 1fr); */
+  gap: 10px;
+  /* grid-template-areas:
+    "char bulb bulb ."
+    "char . pikabig pikabig"
+    "char . pikabig pikabig"; */
+  grid-template:
+    "char bulb bulb ." 80px
+    "char . pikabig pikabig" 80px
+    "char . pikabig pikabig" 80px / 1fr 1fr 1fr 1fr;
+}
+
+#bulbarea {
+  grid-area: bulb;
+}
+
+#chararea {
+  grid-area: char;
+}
+
+#pikaarea {
+  grid-area: pikabig;
+}
+
+.content {
+  display: grid;
+  grid-template: 100px 40px / min-content 1fr max-content;
+  gap: 10px;
+}
+
+.minmax {
+  display: grid;
+  /* grid-template: 100px 40px / minmax(300px, 600px) 1fr; */
+  /* grid-template: 100px 40px / minmax(200px, max-content) minmax(200px, 1fr); */
+  grid-template: 100px 40px / 1fr 1fr;
+  gap: 10px;
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Autofit va a ajustar los elementos del grid hasta rellenar el contenedor */
+.autofit {
+  display: grid;
+  /* grid-template: repeat(3, 80px) / repeat(auto-fit, 200px); */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: 80px;
+  gap: 10px;
+}
+
+/* Autofill va a ajustar los elementos en el grid, pero dejando un hueco si sobra espacio */
+.autofill {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: 80px;
+  gap: 10px;
+}
+
+.autoflow-column {
+  display: grid;
+  grid-template-rows: repeat(3, 100px);
+  grid-auto-columns: 200px;
+  grid-auto-flow: column;
+  gap: 10px;
+}
+
+.dense {
+  display: grid;
+  grid-template-rows: 120px 120px 120px;
+  grid-auto-columns: 120px;
+  grid-auto-flow: column dense;
+  gap: 10px;
+}
+
+.dense :nth-child(1) {
+  grid-row: span 2;
+}
+
+.dense :nth-child(2) {
+  grid-row: span 3;
+}
+
+/* POSICIONAR ELEMENTOS */
+
+.position-items {
+  display: grid;
+  background: rgb(231, 205, 205);
+  border-radius: 5px;
+  grid-template: 200px 200px / 1fr 1fr;
+  gap: 10px;
+}
+
+.small {
+  width: 80px;
+  height: 80px;
+}
+
+.justify-items {
+  /* start | end | center | stretch */
+  /* justify-items: center; */
+}
+
+.align-items {
+  /* stretch | start | end | center | baseline */
+  /* align-items: center; */
+}
+
+.place-items {
+  place-items: start end;
+}
+
+.justify-self {
+  /* start | end | center | stretch */
+  /* justify-self: center; */
+}
+
+.align-self {
+  /* start | end | center | stretch */
+  /* align-self: end; */
+}
+
+.place-self {
+  place-self: end center;
+}
+
+.position-content {
+  display: grid;
+  background: rgb(231, 205, 205);
+  border-radius: 5px;
+  grid-template-columns: 100px 100px;
+  grid-auto-rows: 100px;
+  gap: 10px;
+  height: 500px;
+}
+
+.justify-content {
+  /* start | end | center | stretch | space-around | space-between | space-evenly */
+  /* justify-content: end; */
+}
+
+.align-content {
+  /* start | end | center | stretch | space-around | space-between | space-evenly */
+  /* align-content: end; */
+}
+
+.place-content {
+  place-content: end;
+}
