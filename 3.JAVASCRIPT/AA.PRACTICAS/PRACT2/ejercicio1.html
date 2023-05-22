@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P2 ejercicio 1</title>
+<script>
+    function palindromo(texto)
+    {
+        let texto_sin_espacios = texto.split(" ").join("");
+        let texto_invertido = texto.split(" ").join("").split("").reverse().join("");
+        texto_invertido===texto_sin_espacios ? console.log("la cadena introducida es palindromo") : console.log("la cadena introducida no es palindromo");
+    }
+    let nosoypalindromo = ("la hora del murcielago")
+    let voyaserpalindromo = ("la ruta nos aporto otro paso natural")
+    palindromo(nosoypalindromo);
+    palindromo(voyaserpalindromo);
+
+    // comentarios ejercicio.
+    // en primer lugar, notamos que tenemos que trabajar con strings. Si nos vamos al caso más desfavorable (una frase con espacios), nos damos cuenta de que necesitamos eliminar dichos espacios del string. una vez eliminados los espacios del string, lo convertimos en un array (que es lo que sabemos tocar de momento) e invertimos el orden de los componentes. cuando tenemos nuestro array invertido, volvemos a transformarlo en un string para compararlo con el string inicial. si son iguales son palíndromo y si no, no lo son. como dato, necesitamos tener toda la frase en mayúsculas o en minúsculas, ya que JS diferencia entre ambas, ahí fallaría esta funcion.
+
+
+
+    // ESTO SON PRUEBAS PREVIAS AL EJERCICIO, NO TIENEN IMPORTANCIA.
+    // let text = ("mesa")
+    // let text1 = text.split("").reverse()
+    // console.log(text1 , text)
+    // let texto = ("me cargo los espacios");
+    // console.log(texto);
+    // let prueba = texto.split(" ").join("").split("").reverse().join("")
+    // console.log(prueba)
+    // let texto1=texto.split(" ").reverse().join("")
+    // console.log(texto1 , texto);
+
+    // let text = ("mesa")
+    // let text1 = text.split("").reverse()
+    // console.log(text1 , text)
+</script>
+</head>
+<body>
+    
+</body>
+</html>
+

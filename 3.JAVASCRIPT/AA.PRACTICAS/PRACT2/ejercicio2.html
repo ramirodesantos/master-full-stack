@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P2 ejercicio 2</title>
+<script>
+    function numeroprimo(numero)
+    {
+        let i=2;
+        let primo;
+        if(numero===1)
+        {
+        }else while((numero % i !=0)&&(i<numero))
+            {
+                i++;
+            }
+        if((numero===i)||(numero === 1))
+        {
+            console.log("el numero: " + numero + " es primo");
+        }else
+        {
+            console.log("el numero: " + numero + " no es primo");
+        }
+    }
+
+    let numero1=15;
+    let numero2=1;
+    numeroprimo(numero1);
+    numeroprimo(numero2);
+    
+   
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

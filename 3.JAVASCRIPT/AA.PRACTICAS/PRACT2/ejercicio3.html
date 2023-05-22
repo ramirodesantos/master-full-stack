@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P2 ejercicio3</title>
+<script>
+    let numero_dni = prompt("Por favor, ingresa tu número de DNI sin incluir la letra", "56412314");
+    let letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S','Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+    let calculo_letra;
+    if((numero_dni<0)||(numero_dni>99999999))
+    {
+        alert("el numero de DNI introducido no es válido");
+    }else
+    {
+        calculo_letra=letras[numero_dni%23]
+    }
+
+    let letra_dni = prompt("Por favor, ingresa la letra de tu DNI en mayúscula", "X");
+
+    if(letra_dni!=calculo_letra)
+    {
+        alert("la letra de tu DNI introducida no es válida")
+    }else
+    {
+        alert("los valores introducidos son correctos.")
+    }
+
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

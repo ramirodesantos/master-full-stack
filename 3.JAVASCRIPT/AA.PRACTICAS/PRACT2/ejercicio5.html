@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P2 ejercicio5</title>
+<script>
+    let inicio=144;
+    let vector_mult5 = new Array();
+    let k=0;
+    let long_array=200;
+    for (k=0; k<long_array; inicio++)
+    {
+        if(inicio % 5 == 0)
+        {
+            vector_mult5[k]=inicio;
+            k++;
+        }
+    }
+    console.log("el valor del indice 43 del array es: " + vector_mult5[43]);
+    console.log("el valor del ultimo indice del array es: " + vector_mult5[long_array-1])
+
+    let ultimo_indice=(long_array-1);
+    let ultimos_indices_suma=63;
+    let suma=0;
+    for(k=ultimo_indice-(ultimos_indices_suma-1); k<=199;k++)
+    {
+        suma += vector_mult5[k];
+    }
+    console.log("la suma de los " + ultimos_indices_suma + " ultimos indices es: " + suma);
+</script>
+</head>
+<body>
+    
+</body>
+</html>
